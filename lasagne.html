@@ -53,15 +53,37 @@
     width:400px;
     padding:10px;    
 }
+    #left-column{
+      float: left;
+      color:white;
+      width:30%;
+      padding:15px;
+    }
+    #right-column{
+      float: left;
+      color:white;
+      width:70%;
+      padding:15px;
+    }
 
    </style> 
 
    <div id="header">
   <h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
   </div>
-  <div id="nav">
+    <div id="nav">
     <h1>My Dinner</h1><br>
-    <script type="text/javascript">
+    <div id="left-column"> 
+      <p>People</p><br><br>
+      <br><br>
+      Dishname
+      <p>Pending</p>
+    <input class="btn btn-default" type="button" value="Confirm Dinner">
+    </div>
+      <br>
+      
+      <div id="left-column">
+        <script type="text/javascript">
       var clicks = 0;
       function onClick() {
           clicks += 1;
@@ -69,19 +91,22 @@
       };
       </script>
     <div id="button">
-      <input id="qty" value="0"/>
-      <button class="btn btn-default" id="down" onclick="modify_qty(-1)">&darr;</button>
-      <button class="btn btn-default" id="up" onclick="modify_qty(1)">&uarr;</button>
+      <input id="qty" value="0" />
+    <button class="btn btn-default" id="down" onclick="modify_qty(-1)">&darr;</button>
+        <button class="btn btn-default" id="up" onclick="modify_qty(1)">&uarr;</button>
     </div>
-    People<br><br>
-    Dishname<br>
-    Pending<br>
-    <br><br><br><br>
-  <input class="btn btn-default" type="button" value="Confirm Dinner">
+    <br><br>
+      <br><br><br>
+      <p>78</p>
+      </div>
+  
   </div>
   
-
+  <div id="left-column">
     <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" class="img-rounded" width="500" float:right; alt="...">
+    <p>Själva redovisningen består av att ni lämnar in URL:ar till adresserna där dina filer ligger på en webbserver. Skriv även namnet på din eventuelle labpartner, samt hur många poäng du aspirerar på att få.</p>
+    <button class="btn btn-default" type="button" float:right; >Go back to select dish</button>
+  </div>
   
 
   
@@ -115,7 +140,7 @@
     </br>
     <input class="btn btn-default" type="button" value="Confirm Dish">
     </>
-    </div>S 
+    </div>
 </div>
 
     <!-- jQuery -->

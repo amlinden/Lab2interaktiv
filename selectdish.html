@@ -69,15 +69,38 @@
   .thumbnail{    
 
   }
+     #left-column{
+      float: left;
+      color:white;
+      width:30%;
+      padding:15px;
+    }
+    #right-column{
+      float: left;
+      color:white;
+      width:70%;
+      padding:15px;
+    }
    </style>	
   <body>
     <div id="header">
-      <h1>Homelette<small>   From the best chefs in the world directly in youre kitchen</small></h1>
+      <h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
+  </div>
 	  </div>
 
     <div id="nav">
     <h1>My Dinner</h1><br>
-    <script type="text/javascript">
+    <div id="left-column"> 
+      <p>People</p><br><br>
+      <br><br>
+      Dishname
+      <p>Pending</p>
+    <input class="btn btn-default" type="button" value="Confirm Dinner">
+    </div>
+      <br>
+      
+      <div id="left-column">
+        <script type="text/javascript">
       var clicks = 0;
       function onClick() {
           clicks += 1;
@@ -89,11 +112,11 @@
     <button class="btn btn-default" id="down" onclick="modify_qty(-1)">&darr;</button>
         <button class="btn btn-default" id="up" onclick="modify_qty(1)">&uarr;</button>
     </div>
-    People<br><br>
-    Dishname<br>
-    Pending<br>
-    <br><br><br><br>
-  <input class="btn btn-default" type="button" value="Confirm Dinner">
+    <br><br>
+      <br><br><br>
+      <p>78</p>
+      </div>
+  
   </div>
 
 <!-- section -->
@@ -101,7 +124,7 @@
     <h2>Select Dish</h2>
     <!-- search for -->
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control" placeholder="Enter key words">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button">Search</button>
       </span>
