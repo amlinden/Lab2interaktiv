@@ -55,20 +55,7 @@
   }
   #col-lg-6{
     color:black;
-  }
-  .col-sm-6{
-    float:left;
-
-  }
-  .row{
-    
-    width:75%;
-    float:left;
-    padding:15px;  
-  }
-  .thumbnail{    
-
-  }
+}
    </style>	
   <body>
     <div id="header">
@@ -119,36 +106,6 @@
   </div>
 
 
-
-  <div class="row">
-    <!-- storlev på fotona -->
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="...">
-      </div>
-      </div>
-    <div class="col-xs-6 col-md-3">
-      <div class="thumbnail">
-        <img src="http://alltommat.se/wp-content/uploads/import/images/2008-02-19/recept-3948-460x345.jpg" alt="...">
-      </div>
-      </div>
-    <div class="col-xs-6 col-md-3">
-      <div class="thumbnail">
-        <img src="http://www.hemmetsjournal.se/ImageProvider/upload/hj/recept/bilder/Ugnsbakade-fikon_9485-9998c470b61f4bb9adef60700ab074cd__b468m.jpg" alt="...">
-      </div>
-      </div>
-    <div class="col-xs-6 col-md-3">
-      <div class="thumbnail">
-        <img src="http://cdn.arla.se/Files/3405629835/ea61a881-69ac-45d8-b13c-aee8150a4a24.jpg?preset=Main" alt="...">
-      </div>
-      </div>
-    <div class="col-xs-6 col-md-3">
-      <div class="thumbnail">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."> 
-      </div>
-      </div>
-    </div>
-  </div>
 
 
 

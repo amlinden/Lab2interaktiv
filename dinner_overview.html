@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homelette</title>
+
+    <!-- Bootstrap CSS  //http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+  <style>
+
+
+  body {
+  	background-image: url("http://static1.squarespace.com/static/519b1da1e4b005a0d6f42dc8/t/5334f793e4b01041ee379161/1395980325588/WholePantry_Website_web.jpg?format=1500w");
+  }
+
+  
+  	#header {
+    background-color:black;
+    opacity: 0.75;
+    color:white;
+    font-family: "Century gothic", century, sans-serif;
+    text-align:left;
+    padding:10px;
+}
+    #section {
+    line-height:30px;
+    background-color:white; opacity: 0.75;
+    color:black;
+    font-family: "Century gothic", century, sans-serif;
+    width:100%;
+    float:right;
+    padding:15px;    
+}
+    .row{
+      float:middle; 
+      width:75%;
+      padding:15px; 
+    }
+
+   </style>	
+   <div id="header">
+	<h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
+	</div>
+
+  <div id="section">
+    <h3>My dinner 4 people<button class="btn btn-default" type="button" float:right; >Go back and edit dinner</button></h3>
+   
+  </div>
+
+  <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://www.hemmetsjournal.se/ImageProvider/upload/hj/recept/bilder/Ugnsbakade-fikon_9485-9998c470b61f4bb9adef60700ab074cd__b468m.jpg" alt="...">
+       <div class="caption">
+        <h3>Figue</h3>
+      </div>
+    </a>
+  </div>
+   <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://alltommat.se/wp-content/uploads/import/images/2008-02-19/recept-3948-460x345.jpg" width:  100px; height:100px; alt="...">
+      <div class="caption">
+        <h3>Lamb</h3>
+      </div>
+    </a>
+  </div>
+   <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://cdn.arla.se/Files/3405629835/ea61a881-69ac-45d8-b13c-aee8150a4a24.jpg?preset=Main" width:  100px;
+    height: 100px; alt="...">
+        <div class="caption">
+        <h3>?????????</h3>
+      </div>
+    </a>
+  </div>
+  </div>
+  ...
+</div>
+
+<!--Block with text and button -->
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+  </body>
+</html>
