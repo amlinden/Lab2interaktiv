@@ -22,7 +22,14 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
+		type = "starter";
 		return menu[type];
+	}
+
+	this.getSelectedDishName = function(type) {
+		//TODO Lab 2
+		type = "starter";
+		return this.getSelectedDish(type).name;
 	}
 
 	//Returns all the dishes on the menu.
