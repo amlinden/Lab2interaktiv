@@ -13,12 +13,11 @@ var DinnerModel = function() {
  		};
  	}
 
-
- 	var array = [];
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 2;
 	var menu = [3, 100, 200];
+	var model = new DataModel();
 	//calls the updated methos on all the observers in the array
 	var notifyObserver function(obj){
 	 }
@@ -33,7 +32,7 @@ var DinnerModel = function() {
 		if (num>0){
 			numberOfGuests = num;
 		}
-		notifyObserver() 
+		this.model.notify(); 
 	}
 
 	// should return 
@@ -46,12 +45,15 @@ var DinnerModel = function() {
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
 		type = "starter";
+		this.model.notify();
 		return menu[type];
+		 
 	}
 
 	this.getSelectedDishName = function(type) {
 		//TODO Lab 2
 		type = "starter";
+		this.model.notify(); 
 		return this.getSelectedDish(type).name;
 	}
 
@@ -62,6 +64,7 @@ var DinnerModel = function() {
 		for(i in menu){
 			fullMenu.push(this.getDish(menu[i]));
 		}
+		this.model.notify(); 
 		return fullMenu;
 	}
 
@@ -73,6 +76,7 @@ var DinnerModel = function() {
 		for(i in fullMenu){
 			allIngredients = allIngredients.concat(fullMenu[i].ingredients);
 		}
+		this.model.notify(); 
 		return allIngredients;
 	}
 
@@ -86,6 +90,7 @@ var DinnerModel = function() {
 			pricePerGuest += allIngredients[i].price;
 		}
 		totalMenuPrice = pricePerGuest * this.getNumberOfGuests();
+		this.model.notify(); 
 		return totalMenuPrice;
 	}
 
@@ -94,6 +99,7 @@ var DinnerModel = function() {
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2
 		menu[this.getDish(id).type] = id;
+		this.model.notify(); 
 	}
 
 	//Removes dish from menu
@@ -102,6 +108,7 @@ var DinnerModel = function() {
 		if(menu[this.getDish(id).type] == id){
 			delete menu[this.getDish(id).type];
 		}
+		this.model.notify(); 
 	}
 
 	this.getAllIngredientNames = function(){
@@ -110,6 +117,7 @@ var DinnerModel = function() {
 		for(i in allIngredients){
 			string += allIngredients[i].name + ", ";
 		}
+		this.model.notify(); 
 		return string;
 	}
 	/*
@@ -137,7 +145,8 @@ var DinnerModel = function() {
 			}
 		}
 	  	return dish.type == type && found;
-	  });	
+	  });
+	  this.model.notify(); 	
 	}
 
 	//function that returns a dish of specific ID
@@ -147,6 +156,7 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
+		this.model.notify(); 
 	}
 
 
