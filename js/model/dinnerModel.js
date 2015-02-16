@@ -1,16 +1,39 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
- 
+ 	
+ 	var DataModel = function(){
+ 		this._listener = [];
+ 		this.attach = function(listener){
+ 			this._listener.push(listener);
+ 		};
+ 		this.notify = function(args){
+ 			for (var i =0; i < this._listener.length; i++){
+ 				this._listeners[i](this, args);
+ 			}
+ 		};
+ 	}
+
+
+ 	var array = [];
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 2;
 	var menu = [3, 100, 200];
+	//calls the updated methos on all the observers in the array
+	var notifyObserver function(obj){
+	 }
+
+	// add new observer to array
+	this.addObserver = function(observer){
+
+	}
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
 		if (num>0){
 			numberOfGuests = num;
 		}
+		notifyObserver() 
 	}
 
 	// should return 
