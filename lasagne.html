@@ -62,7 +62,7 @@
     #right-column{
       float: left;
       color:white;
-      width:70%;
+      width:24%;
       padding:15px;
     }
 
@@ -71,6 +71,7 @@
    <div id="header">
   <h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
   </div>
+
   <div id="nav">
     <h1>My Dinner</h1><br>
     <div id="left-column"> 
@@ -82,21 +83,20 @@
     </div>
       <br>
       
-      <div id="left-column">
-        <script type="text/javascript">
-      var clicks = 0;
-      function onClick() {
-          clicks += 1;
-          document.getElementById("clicks").innerHTML = clicks;
-      };
-      </script>
-    <div id="button">
-      <input id="qty" value="0" />
-    <button class="btn btn-default" id="down" onclick="modify_qty(-1)">&darr;</button>
-        <button class="btn btn-default" id="up" onclick="modify_qty(1)">&uarr;</button>
-    </div>
-    <br><br>
-      <br><br><br>
+      <div id="right-column">
+        <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>    
+        
+      </span>
+      <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+          <span class="glyphicon glyphicon-minus"></span>
+        </button>     
+      </span>
+      <br><br>
       <p>78</p>
       </div>
   
