@@ -94,13 +94,13 @@ var DinnerModel = function() {
 		this.model.notify(); 
 	}
 
-	this.getAllIngredientNames = function(){
+	this.printAllIngredients = function(){
 		var allIngredients = this.getAllIngredients();
 		var string = "";
 		for(i in allIngredients){
-			string += allIngredients[i].name + ", ";
+			string += allIngredients[i].quantity + " " + allIngredients[i].unit + " " +allIngredients[i].name + " " + allIngredients[i].price + " kr\n";
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 		return string;
 	}
 	
