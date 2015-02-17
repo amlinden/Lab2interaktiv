@@ -1,25 +1,22 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
  	
- 	 this._listener = [];
+ 	this._listener = [];
  		// add new observer to array
  	this.addObserver = function(listener){
 		this._listener.push(listener);
- 	};
+ 	}
  		//calls the updated methos on all the observers in the arra
  	var notifyObserver = function(args){
  		for (var i =0; i < this._listener.length; i++){
  			this._listeners[i](this, args);
 		}
-		};
- 	}
+	}
 
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 2;
 	var menu = [3, 100, 200];
-	
-	}
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
@@ -58,7 +55,7 @@ var DinnerModel = function() {
 		for(i in menu){
 			fullMenu.push(this.getDish(menu[i]));
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 		return fullMenu;
 	}
 
@@ -70,7 +67,7 @@ var DinnerModel = function() {
 		for(i in fullMenu){
 			allIngredients = allIngredients.concat(fullMenu[i].ingredients);
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 		return allIngredients;
 	}
 
@@ -84,7 +81,7 @@ var DinnerModel = function() {
 			pricePerGuest += allIngredients[i].price;
 		}
 		totalMenuPrice = pricePerGuest * this.getNumberOfGuests();
-		this.model.notify(); 
+		//this.model.notify(); 
 		return totalMenuPrice;
 	}
 
@@ -150,7 +147,7 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 	}
 
 
