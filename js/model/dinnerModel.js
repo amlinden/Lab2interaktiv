@@ -1,7 +1,7 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
  	
- 	 this._listener = [];
+ 	this._listener = [];
  		// add new observer to array
  	this.addObserver = function(listener){
 		this._listener.push(listener);
@@ -10,8 +10,9 @@ var DinnerModel = function() {
  	var notifyObserver = function(args){
  		for (var i =0; i < this._listener.length; i++){
  			this._listeners[i](this, args);
-		}
-		};
+ 		}
+	};
+	
  	}
 
 	//TODO Lab 2 implement the data structure that will hold number of guest

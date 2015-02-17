@@ -19,11 +19,13 @@
   }
   div { opacity: 0.75;}
   
-  	#header {
+  	.container {
     background-color:black;
     color:white;
     font-family: "Century gothic", century, sans-serif;
     text-align:left;
+    float:left;
+    width:100%;
     padding:10px;
 }
     section {
@@ -37,29 +39,33 @@
     width:400px;
     padding:10px;	 	 
 }
-
-   </style>	
-   <div id="header">
-	<h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
-	</div>
+  
+  </style>	
+  <div class="container">
+    <div id="header">
+      <h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
+    </div>
+  </div>
 
 
 <!--Block with text and button -->
-<section>
+<div class="container1">
+  <section>
 
-<h2>A Home Dinner Service</h2>
+  <h2>A Home Dinner Service</h2>
 
-<p>
-alsdkjfh asdklfjhads flkjh sdflkjh asdlfkjh asdlfkjh as lkjdshf öasdkfjh  laksjdfh llakjsdhf llkjdfh l
-akjsdhf akdsjhfg ljdsakjhf akdhfb 
-</p>
-</br>
-</br>
-<p>
-start quickly
-</p>
-<input class="btn btn-default" type="button" value="Create new dinner">
-</> 
+  <p>
+  alsdkjfh asdklfjhads flkjh sdflkjh asdlfkjh asdlfkjh as lkjdshf öasdkfjh  laksjdfh llakjsdhf llkjdfh l
+  akjsdhf akdsjhfg ljdsakjhf akdhfb 
+  </p>
+  </br>
+  </br>
+  <p>
+  start quickly
+  </p>
+  <button id="createDinner" class="btn btn-default" value="Create new dinner">Create Dinner</button>
+  </> 
+</div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
