@@ -25,4 +25,3 @@ var ExampleView = function (container, model) {
 	container.append(div);
 	*/
 }
- 
