@@ -7,5 +7,7 @@ var mydinnerView = function (container, model) {
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	
+	this.creatDinner.html("hej")
+
 	model.addObserver(this);
 }

@@ -6,5 +6,6 @@ $(function() {
 	var exampleView = new ExampleView($("#exampleView"), model);
 	var headerView = new HeaderView($("#headerView"), model);
 	var startquicklyView = new StartquicklyView($("#headerView"), model);
+	var mydinnerView = new mydinnerView($("#section"), model);
 
 });
