@@ -19,7 +19,6 @@ var DinnerModel = function() {
 	var numberOfGuests = 2;
 	var menu = [3, 100, 200];
 	
-	
 	}
 
 	this.setNumberOfGuests = function(num) {
