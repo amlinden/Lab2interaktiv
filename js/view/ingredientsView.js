@@ -7,5 +7,5 @@ var IngredientsView = function(container, model){
 	this.allIngredients.html(model.printAllIngredients());
 	this.totalMenuPrice.html(model.getTotalMenuPrice());
 
-	console.log(model.printAllIngredients());
+	//console.log(model.printAllIngredients());
 }
