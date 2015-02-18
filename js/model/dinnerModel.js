@@ -5,41 +5,40 @@ var DinnerModel = function() {
  		// add new observer to array
  	this.addObserver = function(listener){
 		this._listener.push(listener);
- 	};
+ 	}
  		//calls the updated methos on all the observers in the arra
  	var notifyObserver = function(args){
  		for (var i =0; i < this._listener.length; i++){
  			this._listeners[i](this, args);
+<<<<<<< HEAD
  		}
 	};
 	
  	}
+=======
+		}
+	}
+>>>>>>> 189d1a7ac6ffe462936b10ca1bc0a2653e2a7bda
 
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 	var numberOfGuests = 2;
 	var menu = [3, 100, 200];
-	
-	
-	}
 
 	this.setNumberOfGuests = function(num) {
-		//TODO Lab 2
 		if (num>0){
 			numberOfGuests = num;
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
-		//TODO Lab 2
 		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
-		//TODO Lab 2
 		type = "starter";
 		this.model.notify();
 		return menu[type];
@@ -47,7 +46,6 @@ var DinnerModel = function() {
 	}
 
 	this.getSelectedDishName = function(type) {
-		//TODO Lab 2
 		type = "starter";
 		this.model.notify(); 
 		return this.getSelectedDish(type).name;
@@ -55,30 +53,27 @@ var DinnerModel = function() {
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		//TODO Lab 2
 		var fullMenu = [];
 		for(i in menu){
 			fullMenu.push(this.getDish(menu[i]));
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 		return fullMenu;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 2
 		var fullMenu = this.getFullMenu();
 		var allIngredients = [];
 		for(i in fullMenu){
 			allIngredients = allIngredients.concat(fullMenu[i].ingredients);
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 		return allIngredients;
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		//TODO Lab 2
 		var pricePerGuest = 0;
 		var allIngredients = this.getAllIngredients();
 		var totalMenuPrice = 0;
@@ -86,14 +81,13 @@ var DinnerModel = function() {
 			pricePerGuest += allIngredients[i].price;
 		}
 		totalMenuPrice = pricePerGuest * this.getNumberOfGuests();
-		this.model.notify(); 
+		//this.model.notify(); 
 		return totalMenuPrice;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//TODO Lab 2
 		menu[this.getDish(id).type] = id;
 		this.model.notify(); 
 	}
@@ -107,20 +101,19 @@ var DinnerModel = function() {
 		this.model.notify(); 
 	}
 
-	this.getAllIngredientNames = function(){
+	this.printAllIngredients = function(){
 		var allIngredients = this.getAllIngredients();
 		var string = "";
 		for(i in allIngredients){
-			string += allIngredients[i].name + ", ";
+			string += allIngredients[i].quantity + " " + allIngredients[i].unit + " " +allIngredients[i].name + " " + allIngredients[i].price + " kr\n";
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 		return string;
 	}
-	/*
+	
 	this.getDishName = function(id) {
-		return menu[id].name;
+		return this.getDish(id).name;
 	}
-	*/
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)

@@ -1,8 +1,0 @@
-var PreparedDish = function (container, model) {
-
-	this.selectedDishName = container.find("#selectedDishName");
-
-	this.selectedDishName.html(model.getSelectedDishName());
-}
-
-console.log(model.getSelectedDishName("starter"));

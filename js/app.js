@@ -4,8 +4,13 @@ $(function() {
 	
 	//And create the needed controllers and views
 	var exampleView = new ExampleView($("#exampleView"), model);
+<<<<<<< HEAD
 	var headerView = new HeaderView($("#headerView"), model);
 	var startquicklyView = new StartquicklyView($("#headerView"), model);
 	var mydinnerView = new mydinnerView($("#section"), model);
 
+=======
+	var myDinnerView = new MyDinnerView($("#myDinnerView"), model);
+	var ingredientsView = new IngredientsView($("#ingredientsView"), model);
+>>>>>>> 189d1a7ac6ffe462936b10ca1bc0a2653e2a7bda
 });
