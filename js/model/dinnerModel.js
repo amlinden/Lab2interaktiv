@@ -10,8 +10,8 @@ var DinnerModel = function() {
  	var notifyObserver = function(args){
  		for (var i =0; i < this._listener.length; i++){
  			this._listeners[i](this, args);
-		}
-	}
+ 		}
+	};
 
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
@@ -64,8 +64,8 @@ var DinnerModel = function() {
 		return allIngredients;
 	}
 
-	this.getDishIngredients = function(type) {
-		var dish = this.getFullMenu()[type];
+	this.getDishIngredients = function(id){
+		var dish = this.getDish(id);
 		var dishIngredients = [];
 		dishIngredients = dishIngredients.concat(dish.ingredients);
 		//this.model.notify(); 
@@ -86,7 +86,7 @@ var DinnerModel = function() {
 	}
 
 	this.getDishPrice = function(type) {
-		var dishIngredients = this.getDishIngredients(type);
+		var dishIngredients = this.getDishIngredients(menu[type].id);
 		var dishPrice = 0;
 		for(i in dishIngredients){
 			dishPrice += dishIngredients[i].price;

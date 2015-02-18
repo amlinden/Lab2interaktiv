@@ -17,18 +17,21 @@
   body {
   	background-image: url("http://static1.squarespace.com/static/519b1da1e4b005a0d6f42dc8/t/5334f793e4b01041ee379161/1395980325588/WholePantry_Website_web.jpg?format=1500w");
   }
-  div { opacity: 0.75;}
-  
-  	#header {
+
+    #header {
     background-color:black;
+    opacity: 0.75;
     color:white;
     font-family: "Century gothic", century, sans-serif;
     text-align:left;
+
     padding:10px;
 }
+
     section {
     background-color:black;
     opacity: 0.75;
+    text-align:left;
     color:white;
     font-family: "Century gothic", century, sans-serif;
     position: absolute;
@@ -37,29 +40,33 @@
     width:400px;
     padding:10px;	 	 
 }
+  
+  </style>	
 
-   </style>	
-   <div id="header">
-	<h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
-	</div>
+  <div id="header">
+    <h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
+  </div>
+
 
 
 <!--Block with text and button -->
-<section>
+<div class="container">
+  <section>
+    <h2>A Home Dinner Service</h2>
 
-<h2>A Home Dinner Service</h2>
+    <p>
+    alsdkjfh asdklfjhads flkjh sdflkjh asdlfkjh asdlfkjh as lkjdshf öasdkfjh  laksjdfh llakjsdhf llkjdfh l
+    akjsdhf akdsjhfg ljdsakjhf akdhfb 
+    </p>
+    </br>
+    </br>
+    <p>
+    start quickly
+    </p>
+    <button id="createDinner" class="btn btn-default" value="Create new dinner">Create Dinner</button>
+  </section> 
+</div>
 
-<p>
-alsdkjfh asdklfjhads flkjh sdflkjh asdlfkjh asdlfkjh as lkjdshf öasdkfjh  laksjdfh llakjsdhf llkjdfh l
-akjsdhf akdsjhfg ljdsakjhf akdhfb 
-</p>
-</br>
-</br>
-<p>
-start quickly
-</p>
-<input class="btn btn-default" type="button" value="Create new dinner">
-</> 
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -71,5 +78,6 @@ start quickly
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+  <script src="js/view/StartquicklyView.js"></script>
   </body>
 </html>
