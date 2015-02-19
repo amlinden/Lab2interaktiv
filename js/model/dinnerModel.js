@@ -36,11 +36,6 @@ var DinnerModel = function() {
 		return menu[type];
 	}
 
-	this.getSelectedDishName = function(type) {
-		type = 0; 
-		return this.getDish(this.getSelectedDish(type)).name;
-	}
-
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		var fullMenu = [];
@@ -62,6 +57,7 @@ var DinnerModel = function() {
 		return allIngredients;
 	}
 
+	/*
 	this.getDishIngredients = function(id){
 		var dish = this.getDish(id);
 		var dishIngredients = [];
@@ -69,6 +65,7 @@ var DinnerModel = function() {
 		//this.model.notify(); 
 		return dishIngredients;
 	}
+	*/
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
@@ -83,6 +80,7 @@ var DinnerModel = function() {
 		return totalMenuPrice;
 	}
 
+	/*
 	this.getDishPrice = function(type) {
 		var dishIngredients = this.getDishIngredients(menu[type].id);
 		var dishPrice = 0;
@@ -92,6 +90,7 @@ var DinnerModel = function() {
 		//this.model.notify(); 
 		return dishPrice;
 	}
+	*/
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
@@ -109,6 +108,7 @@ var DinnerModel = function() {
 		this.model.notify(); 
 	}
 
+	/*
 	this.printAllIngredients = function(){
 		var allIngredients = this.getAllIngredients();
 		var string = "";
@@ -118,6 +118,7 @@ var DinnerModel = function() {
 		//this.model.notify(); 
 		return string;
 	}
+	*/
 	
 	/*
 	this.getDishName = function(id) {

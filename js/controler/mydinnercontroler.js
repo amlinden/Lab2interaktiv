@@ -6,7 +6,7 @@ var Mydinnercontroler = function(view, model){
 	});
 
 	view.minusButton.click(function(){
-		model.setNumberOfGuests(model.getNumberOfGuests() -1);
+		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
 
 	});
 }
