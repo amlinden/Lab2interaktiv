@@ -8,7 +8,7 @@ var MyDinnerView = function(container, model){
 
 	function viewThis(){
 		numberOfGuests.html(model.getNumberOfGuests());
-		dish.html(model.getDish().name);
+		dish.html(model.getDish(3).name);
 	}
 
 	this.update = function(){

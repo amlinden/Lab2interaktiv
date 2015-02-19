@@ -68,6 +68,11 @@
       width:23%;
       padding:15px;
     }
+    #dishname{
+      width: 100%;
+      opacity: 20%;
+      background-color: white;
+    }
 
    </style>	
   <body>
@@ -84,7 +89,9 @@
         <p>People</p>
         <div id="numberOfGuests"><input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10"></div>
         <br><br>
+        <div id="dishname">
         Dishname
+        </div>
         <p>Pending</p>
         <button id="createDinner" class="btn btn-default" value="Confirm dinner">Create Dinner</button>
       </div>
@@ -94,14 +101,16 @@
         <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
         <br><br>
         <br>
+        Cost
+        <br>
 
         
       </div>
       
       
   
+    </div>
   </div>
-</div>
 
 <!-- section -->
   <div class="container1">
@@ -129,31 +138,32 @@
 
 
 
-  <div class="row">
+  <div id="pictures" class="row">
     <!-- storlev på fotona -->
     <div class="col-sm-6 col-md-3">
+
       <div class="thumbnail">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="...">
+        <a href="lasagne.html"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."></a>
       </div>
       </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://alltommat.se/wp-content/uploads/import/images/2008-02-19/recept-3948-460x345.jpg" alt="...">
+        <a href="lasagne.html"><img src="http://alltommat.se/wp-content/uploads/import/images/2008-02-19/recept-3948-460x345.jpg" alt="..."></a>
       </div>
       </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://www.hemmetsjournal.se/ImageProvider/upload/hj/recept/bilder/Ugnsbakade-fikon_9485-9998c470b61f4bb9adef60700ab074cd__b468m.jpg" alt="...">
+        <a href="lasagne.html"><img src="http://www.hemmetsjournal.se/ImageProvider/upload/hj/recept/bilder/Ugnsbakade-fikon_9485-9998c470b61f4bb9adef60700ab074cd__b468m.jpg" alt="..."></a>
       </div>
       </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
-        <img src="http://cdn.arla.se/Files/3405629835/ea61a881-69ac-45d8-b13c-aee8150a4a24.jpg?preset=Main" alt="...">
+        <a href="lasagne.html"><img src="http://cdn.arla.se/Files/3405629835/ea61a881-69ac-45d8-b13c-aee8150a4a24.jpg?preset=Main" alt="..."></a>
       </div>
       </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
-        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."> 
+        <a href="lasagne.html"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."></a>
       </div>
       </div>
     </div>
@@ -177,8 +187,11 @@
 	<script src="js/view/exampleView.js"></script>
 	
   <script src="js/view/StartquicklyView.js"></script>
-  <script src="js/view/mydinnerView.js"></script>
+  <script src="js/view/myDinnerView.js"></script>
   <script src="js/controler/mydinnercontroler.js"></script>
+  <script src="js/view/dishesView.js"></script>
+  <script src="js/controler/dishescontroler.js"></script>
+
 
   </body>
 </html>
