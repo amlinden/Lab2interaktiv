@@ -4,11 +4,11 @@ var MyDinnerView = function(container, model){
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-	var dishName = this.dishName = container.find("#dishName");
+	var dish = this.dish = container.find("#dish");
 
 	function viewThis(){
 		numberOfGuests.html(model.getNumberOfGuests());
-		dishName.html(model.getDishName(3));
+		dish.html(model.getDish(3).name);
 	}
 
 	this.update = function(){

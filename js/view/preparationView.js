@@ -18,4 +18,8 @@ var PreparationView = function(container, model){
 	this.dishIngredients.html(ingredients);
 	this.dishImage.html(model.getDish(id).image);
 
+	console.log(ingredients);
+
+	this.update()
+
 }

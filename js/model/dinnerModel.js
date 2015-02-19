@@ -119,9 +119,11 @@ var DinnerModel = function() {
 		return string;
 	}
 	
+	/*
 	this.getDishName = function(id) {
 		return this.getDish(id).name;
 	}
+	*/
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
