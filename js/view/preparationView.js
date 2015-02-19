@@ -7,7 +7,6 @@ var PreparationView = function(container, model){
 
 	//
 	var id = 3;
-
 	var ingredients = "";
 	var ingArray = model.getDishIngredients(id);
 	for (i in ingArray){

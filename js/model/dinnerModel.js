@@ -22,7 +22,7 @@ var DinnerModel = function() {
 		if (num>0){
 			numberOfGuests = num;
 		}
-		//this.model.notify(); 
+		this.model.notify(); 
 	}
 
 	// should return 
@@ -33,13 +33,11 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		type = 0;
-		//this.model.notify();
 		return menu[type];
 	}
 
 	this.getSelectedDishName = function(type) {
-		type = 0;
-		//this.model.notify(); 
+		type = 0; 
 		return this.getDish(this.getSelectedDish(type)).name;
 	}
 
@@ -145,7 +143,7 @@ var DinnerModel = function() {
 		}
 	  	return dish.type == type && found;
 	  });
-	  this.model.notify(); 	
+	  //this.model.notify(); 	
 	}
 
 	//function that returns a dish of specific ID
@@ -155,7 +153,7 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
-		this.model.notify(); 
+		//this.model.notify(); 
 	}
 
 
