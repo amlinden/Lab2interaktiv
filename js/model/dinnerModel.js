@@ -7,9 +7,9 @@ var DinnerModel = function() {
 		this._listener.push(listener);
  	}
  		//calls the updated methos on all the observers in the arra
- 	var notifyObserver = function(args){
+ 	this.notifyObserver = function(args){
  		for (var i =0; i < this._listener.length; i++){
- 			this._listeners[i](this, args);
+ 			this._listener[i].update(args);
  		}
 	};
 
@@ -22,7 +22,7 @@ var DinnerModel = function() {
 		if (num>0){
 			numberOfGuests = num;
 		}
-		this.model.notify(); 
+		this.notifyObserver(); 
 	}
 
 	// should return 

@@ -1,12 +1,22 @@
 
 var MyDinnerView = function(container, model){
-
-	this.numberOfGuests = container.find("#numberOfGuests");
+//var är globalt
+	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-	this.dishName = container.find("#dishName");
+	var dishName = this.dishName = container.find("#dishName");
 
-	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.dishName.html(model.getDishName(3));
+	function viewThis(){
+		numberOfGuests.html(model.getNumberOfGuests());
+		dishName.html(model.getDishName(3));
+	}
+
+	this.update = function(){
+		viewThis();
+	}
+
+	model.addObserver(this);
+
+	viewThis();
 }
 
