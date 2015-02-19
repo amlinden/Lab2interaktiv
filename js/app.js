@@ -14,5 +14,6 @@ $(function() {
 	var myDinnerView = new MyDinnerView($("#myDinnerView"), model);
 	var ingredientsView = new IngredientsView($("#ingredientsView"), model);
 	var selectedMenuView = new SelectedMenuView($("#selectedMenuView"), model);
+	var preparationView = new PreparationView($("#preparationView"), model);
 
 });
