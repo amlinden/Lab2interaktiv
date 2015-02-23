@@ -146,7 +146,7 @@ var DinnerModel = function() {
 		}
 	  	return dish.type == type && found;
 	  });
-	  //this.model.notify(); 	
+	  this.notifyObserver(); 	
 	}
 
 	//function that returns a dish of specific ID

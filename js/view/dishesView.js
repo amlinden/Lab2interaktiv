@@ -1,18 +1,42 @@
 var DishesView = function (container, model) {
-	var allpictures = this.allpictures = containerpictures.find("#pictures");
-	var coursebutton = this.coursebutton = container1.find("#coursebutton");
-	var starter1 = this.starter1 = containerpictures.find("#starter1");
+	
+	//vet inte vad denna gör riktigt
+	var dishBrowser= this.dishBrowser = container1.find("#dishBrowser");
 
 
-	function viewThis(){
-		allpictures.html(model.getNumberOfGuests());
+	var searchword ="";
+	function showndishes(searchword){
+		//option = starter/main/dessert
+		var option = container1.find("#coursebutton").find(":selected").data("type");
+		var dishes;
+		if(!(searchword ==""){
+			//all dishes that contains the searchword
+			dishes = model.getAllDishes(option.searchword);
+				//all dishes that contains the selected course
+		} else { dishes = model.getAllDishes(option)};
+		}
+		var html="";
+		var check = 0;
+		//i++ means that it is tha value i? increments the variable but returns the old value
+		//.length is the amount of chars in dishes
+		for (i=0; i<dishes.length; i++){
+			html+="<>" + dishes[i].id + ""
+			+ dishes[i].image
+			+ dishes[i].name
+		}
+		dishBrowser.html(html);
 	}
 
-	this.update = function(){
-		viewThis();
+
+
+	
+
+	this.update = function(str){
+		showndishes(str);
 	}
 
-	model.addObserver(this);
 
-	viewThis();
+
+	showndishes(searchword);
+
 }
