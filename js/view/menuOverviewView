@@ -18,6 +18,8 @@ var MenuOverviewView = function (container, model) {
 		starterPrice.html(model.getDishPrice(model.fullMenu[0]) + " kr");
 		mainDishPrice.html(model.getDishPrice(model.fullMenu[1]) + " kr");
 		dessertPrice.html(model.getDishPrice(model.fullMenu[2]) + " kr");
+
+		console.log(model.getDishPrice(model.fullMenu[2]) + " kr");
 	}
 
 	this.update = function(){
