@@ -44,7 +44,7 @@
     float:left;
     padding:10px; 
 }
-    section {
+    #ingredients {
     background-color:black;
     opacity: 0.75;
     color:white;
@@ -53,7 +53,7 @@
     width:400px;
     padding:10px;    
 }
-    #left-column{
+    #selecteddish{
       float: left;
       color:white;
       width:30%;
@@ -102,7 +102,7 @@
   
   </div>
   
-  <div id="left-column">
+  <div id="selecteddish">
     <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" class="img-rounded" width="500" float:right; alt="...">
     <p>Själva redovisningen består av att ni lämnar in URL:ar till adresserna där dina filer ligger på en webbserver. Skriv även namnet på din eventuelle labpartner, samt hur många poäng du aspirerar på att få.</p>
     <a href="selectdish.html"><button class="btn btn-default" type="button" float:right; >Go back to select dish</button></a>
@@ -114,7 +114,7 @@
 
 
 <!--Block with text and button -->
-    <section>
+    <div id="ingredients">
 
     <h2>Ingredients for 4 people</h2>
 
@@ -138,10 +138,9 @@
 
     </br>
     </br>
-    <input class="btn btn-default" type="button" value="Confirm Dish">
-    </>
+    <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
     </div>
-</div>
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

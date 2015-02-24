@@ -1,24 +1,26 @@
 $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
+	//var dishesView = new dishesView();
 	
-	//And create the needed controllers and views
-	//var exampleView = new ExampleView($("#exampleView"), model);
 
-	//amandas views
-	//var headerView = new HeaderView($("#headerView"), model);
-	//var startquicklyView = new StartquicklyView($("#headerView"), model);
-	//var mydinnerView = new mydinnerView($("#section"), model);
 
-	//alex views
+    //views
 	//var myDinnerView = new MyDinnerView($("#myDinnerView"), model);
+	//var dishesView = new DishesView($("#dishesView"), model);
+	//new ska vara samma som funktionens namn i viewn
+	var Createdinnerview = new CreatedinnerView($("#firstview"), model);
+	var myDinnerView = new MyDinnerView($("#myDinnerView"), model)
+
 	//var ingredientsView = new IngredientsView($("#ingredientsView"), model);
 	//var selectedMenuView = new SelectedMenuView($("#selectedMenuView"), model);
-	//var preparationView = new PreparationView($("#preparationView"), model);
-	var menuOverviewView = new MenuOverviewView($("#menuOverviewView"), model);
+	//var menuOverviewView = new MenuOverviewView($("#menuOverviewView"), model);
 
 	//controlers
-	//var mydinnercontroler = new Mydinnercontroler(myDinnerView,model)
+	//
+	//var dishescontroler = new Dishescontroler(dishesView,model)
+	var createdinnercontroler = new Createdinnercontroler(Createdinnerview, model);
+	var mydinnercontroler = new Mydinnercontroler(myDinnerView, model);
 	//var menuOverviewController = new MenuOverviewController(menuOverviewView, model);
 
 });

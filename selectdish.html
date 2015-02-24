@@ -120,7 +120,7 @@
       <div class="input-group">
         <input id="searchvalue" type="text" class="form-control" placeholder="Enter key words">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Search</button>
+          <button id="search" class="btn btn-default" type="button">Search</button>
         </span>
 
 
@@ -140,17 +140,16 @@
   </div>
 
 
-  <div class="containerpictures">
+  <div  id="dishesView" class="containerpictures">
   <div id="pictures" class="row">
     <!-- storlev på fotona -->
     <div class="col-sm-6 col-md-3">
-
-      <div id="starter1" class="thumbnail">
-        <a href="lasagne.html"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."></a>
+      <div id="picture1" class="thumbnail">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="...">
       </div>
     </div>
     <div class="col-xs-6 col-md-3">
-      <div id="starter2" class="thumbnail">
+      <div id="picture2" class="thumbnail">
         <a href="lasagne.html"><img src="http://alltommat.se/wp-content/uploads/import/images/2008-02-19/recept-3948-460x345.jpg" alt="..."></a>
       </div>
     </div>
@@ -190,7 +189,6 @@
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	
-  <script src="js/view/StartquicklyView.js"></script>
   <script src="js/view/myDinnerView.js"></script>
   <script src="js/controler/mydinnercontroler.js"></script>
   <script src="js/view/dishesView.js"></script>
