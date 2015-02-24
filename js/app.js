@@ -15,11 +15,10 @@ $(function() {
 	//var ingredientsView = new IngredientsView($("#ingredientsView"), model);
 	//var selectedMenuView = new SelectedMenuView($("#selectedMenuView"), model);
 	//var preparationView = new PreparationView($("#preparationView"), model);
-	//var menuOverviewView = new MenuOverviewView($("#menuOverviewView"), model);
+	var menuOverviewView = new MenuOverviewView($("#menuOverviewView"), model);
 
 	//controlers
 	//var mydinnercontroler = new Mydinnercontroler(myDinnerView,model)
 	//var menuOverviewController = new MenuOverviewController(menuOverviewView, model);
-	var menuOverviewView = new MenuOverviewView($("#menuOverviewView"), model);
 
 });
