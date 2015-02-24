@@ -1,14 +1,14 @@
 var DishesView = function (container, model) {
 
 	
-	//vet inte vad denna gör riktigt
-	var dishBrowser= this.dishBrowser = container1.find("#dishBrowser");
+	//cotainern i detta fall är HTMLkoden
+	var dishBrowser= this.dishBrowser = container.find("#dishBrowser");
 
 
 	var searchword ="";
 	function showndishes(searchword){
 		//option = starter/main/dessert
-		var option = container1.find("#coursebutton").find(":selected").data("type");
+		var option = container.find("#coursebutton").find(":selected").data("type");
 		var dishes;
 		if(!(searchword ==""){
 			//all dishes that contains the searchword
@@ -40,7 +40,6 @@ var DishesView = function (container, model) {
 
 	showndishes(searchword);
 
-	this.pictures = row.find("#row"); // eller col-sm-6 col-md-3??
-	this.pictures.html(model.getAllDishes());
+
 
 }
