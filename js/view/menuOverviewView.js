@@ -1,25 +1,47 @@
 var MenuOverviewView = function (container, model) {
-	var confirmDishButton = this.confirmDishButton = container.find("#confirmDishButton");
-/*
-	var starter = this.starter = container.find("#starter");
-	var mainDish = this.mainDish = container.find("#mainDish");
-	var dessert = this.dessert = container.find("#dessert");
-*/
-	var starterPrice = this.starterPrice = container.find("#starterPrice");
-	var mainDishPrice = this.mainDishPrice = container.find("#mainDishPrice");
-	var dessertPrice = this.dessertPrice = container.find("#dessertPrice");
+	var confirmDishButton = this.confirmDishButton = container.find("#confirmdish");
+
+	var menuView = this.menuView = container.find("#menuView");
+
+	$("#preparationView").hide();
+	$("#exampleView").hide();
 
 	function viewThis(){
-/*
-		starter.html(model.getDish(model.fullMenu[0]).image);
-		mainDish.html(model.getDish(model.fullMenu[1]).image);
-		dessert.html(model.getDish(model.fullMenu[2]).image);
-*/
-		starterPrice.html(model.getDishPrice(model.getFullMenu[0]) + " kr");
-		mainDishPrice.html(model.getDishPrice(model.getFullMenu[1]) + " kr");
-		dessertPrice.html(model.getDishPrice(model.getFullMenu[2]) + " kr");
 
-		console.log(model.getDishPrice(model.fullMenu[2]) + " kr");
+		var prices = [0, 0, 0];
+
+		var starter = model.getFullMenu()[0];
+		for(i in starter.ingredients){
+			prices[0] += starter.ingredients[i].price;
+		}
+
+		var mainDish = model.getFullMenu()[1];
+		for(i in mainDish.ingredients){
+			prices[1] += mainDish.ingredients[i].price;
+		}
+
+		var dessert = model.getFullMenu()[2];
+		for(i in dessert.ingredients){
+			prices[2] += dessert.ingredients[i].price;
+		}
+
+		var htmlCode = '';
+
+		for (k in model.getFullMenu()){
+
+			htmlCode += '<div class="col-xs-6 col-md-3">'
+	      	+ '<a href="#" class="thumbnail">'
+	        + '<img src="images/' + model.getFullMenu()[k].image + '">'
+	        + '<div class="caption">'
+	        + '<h3>' + model.getFullMenu()[k].name + '</h3>'
+	        + '</div>'
+	      	+ '</a>'
+	      	+ '<p>' + prices[k] + 'kr</p>'
+	    	+ '</div>';
+    	}
+    	//console.log(htmlCode);
+    	menuView.html(htmlCode);
+
 	}
 
 	this.update = function(){

@@ -1,7 +1,10 @@
-var MenuOverviewController = function(view, model){
+var MenuOverviewController = function (view, model){
 
+	//ska hidea menuoverviewview och hämta ??ALEX?
 	view.confirmDishButton.click(function(){
-
+		$("#menuOverviewView").hide();
+		$("#exampleView").hide();
+		$("#preparationView").show();
 	});
 
 /*

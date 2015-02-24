@@ -79,6 +79,7 @@
     <span id="menuView"></span>
     <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish" >  
 </div>
+
 <div id="exampleView">
       <div>
         Number of guests: <span id="numberOfGuests"></span>
@@ -88,6 +89,21 @@
         <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
       </div>
     </div>
+
+<div id="preparationView">
+    <div id="left-column"> 
+      <span id="dishImage"></span>
+    </div>
+  <div id="middle-column">
+    <!--<h2>Food</h2>-->
+    <h2><span id="dishName"></span></h2>
+    <p><span id="dishIngredients"></span></p>
+  </div>  
+  <div id="right-column"> 
+    <h2>Preparation</h2>
+    <p><span id="dishDescription"></span></p>
+  </div>
+</div>
 
 <!--Block with text and button -->
 
@@ -105,5 +121,6 @@
 	<script src="js/view/exampleViewController.js"></script>
   <script src="js/view/menuOverviewView.js"></script>
   <script src="js/controler/menuOverviewController.js"></script>
+  <script src="js/view/preparationView.js"></script>
   </body>
 </html>
