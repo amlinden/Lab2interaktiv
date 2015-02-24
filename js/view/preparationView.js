@@ -1,25 +1,30 @@
 var PreparationView = function(container, model){
 
-	this.dish = container.find("#dish");
-	this.dishDescription = container.find("#dishDescription");
-	this.dishIngredients = container.find("#dishIngredients");
-	this.dishImage = container.find("#dishImage");
+	var dish = this.dish = container.find("#dish");
+	var dishDescription = this.dishDescription = container.find("#dishDescription");
+	var dishIngredients = this.dishIngredients = container.find("#dishIngredients");
+	var dishImage = this.dishImage = container.find("#dishImage");
 
-	//
-	var id = 3;
+	function viewThis(){
+
 	var ingredients = "";
-	var ingArray = model.getDishIngredients(id);
+	var ingredientsArray = model.getDishIngredients(model.getDishToView());
 	for (i in ingArray){
-		ingredients += ingArray[i].name + "\n";
+		ingredients += ingredientsArray[i].name + "\n";
 	}
 
-	this.dish.html(model.getDish(id).name);
-	this.dishDescription.html(model.getDish(id).description);
-	this.dishIngredients.html(ingredients);
-	this.dishImage.html(model.getDish(id).image);
+		this.dish.html(model.getDish(model.getDishToView()).name);
+		this.dishDescription.html(model.getDish(model.getDishToView()).description);
+		this.dishIngredients.html(ingredients)
+		this.dishImage.html(model.getDish(model.getDishToView()).image);
+	}
 
-	console.log(ingredients);
+	this.update = function(){
+		viewThis();
+	}
 
-	this.update()
+	model.addObserver(this);
+
+	viewThis();
 
 }
