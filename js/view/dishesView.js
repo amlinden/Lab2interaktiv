@@ -1,4 +1,5 @@
 var DishesView = function (container, model) {
+
 	
 	//vet inte vad denna gör riktigt
 	var dishBrowser= this.dishBrowser = container1.find("#dishBrowser");
@@ -38,5 +39,8 @@ var DishesView = function (container, model) {
 
 
 	showndishes(searchword);
+
+	this.pictures = row.find("#row"); // eller col-sm-6 col-md-3??
+	this.pictures.html(model.getAllDishes());
 
 }
