@@ -118,52 +118,49 @@
       <h2>Select Dish</h2>
       <!-- search for -->
       <div class="input-group">
-        <input id="searchvalue" type="text" class="form-control" placeholder="Enter key words">
+        <input type="text" class="form-control" placeholder="Enter key words">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">Search</button>
         </span>
-
-
         <!-- main dessert starter -->
-        <div class="col-xs-5">
-          <select id="coursebutton" class="form-control">
-            <option data-type="starter" selected>Starter</option>
-            <option data-type="main" selected>Main</option>
-            <option data-type="dessert" selected>Dessert</option>
-          </select>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Main <span class="caret"></span></button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li><a href="#">Starter</a></li>
+            <li><a href="#">Main</a></li>
+            <li><a href="#">Dessert</a></li>
+            <li class="divider"></li>
+          </ul>
         </div>
-          
-       
       </div>
-      <div id="dishBrowser" class="col-md-9 pull right"></div>
     </div>
   </div>
 
 
-  <div class="containerpictures">
+
   <div id="pictures" class="row">
     <!-- storlev på fotona -->
     <div class="col-sm-6 col-md-3">
 
-      <div id="starter1" class="thumbnail">
+      <div class="thumbnail">
         <a href="lasagne.html"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."></a>
       </div>
-    </div>
+      </div>
     <div class="col-xs-6 col-md-3">
-      <div id="starter2" class="thumbnail">
+      <div class="thumbnail">
         <a href="lasagne.html"><img src="http://alltommat.se/wp-content/uploads/import/images/2008-02-19/recept-3948-460x345.jpg" alt="..."></a>
       </div>
-    </div>
+      </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
         <a href="lasagne.html"><img src="http://www.hemmetsjournal.se/ImageProvider/upload/hj/recept/bilder/Ugnsbakade-fikon_9485-9998c470b61f4bb9adef60700ab074cd__b468m.jpg" alt="..."></a>
       </div>
-    </div>
+      </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
         <a href="lasagne.html"><img src="http://cdn.arla.se/Files/3405629835/ea61a881-69ac-45d8-b13c-aee8150a4a24.jpg?preset=Main" alt="..."></a>
       </div>
-    </div>
+      </div>
     <div class="col-xs-6 col-md-3">
       <div class="thumbnail">
         <a href="lasagne.html"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" alt="..."></a>
@@ -171,7 +168,6 @@
       </div>
     </div>
   </div>
-</div>
 
 
 
