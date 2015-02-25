@@ -1,7 +1,16 @@
 var MenuOverviewView = function (container, model) {
+<<<<<<< Updated upstream
 
 	var finishButton = this.finishButton = container.find("#finishButton");
 	var menuView = this.menuView = container.find("#menuView");
+=======
+	var confirmDishButton = this.confirmDishButton = container.find("#confirmdish");
+
+	var menuView = this.menuView = container.find("#menuView");
+
+	$("#preparationView").hide();
+	$("#exampleView").hide();
+>>>>>>> Stashed changes
 
 	function viewThis(){
 
@@ -36,8 +45,14 @@ var MenuOverviewView = function (container, model) {
 	      	+ '<p>' + prices[k] + 'kr</p>'
 	    	+ '</div>';
     	}
+<<<<<<< Updated upstream
     	
     	menuView.html(htmlCode);
+=======
+    	//console.log(htmlCode);
+    	menuView.html(htmlCode);
+
+>>>>>>> Stashed changes
 	}
 
 	this.update = function(){
