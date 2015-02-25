@@ -1,55 +1,35 @@
 var DishesView = function (container, model) {
 
-	this.search = container.find("#searchvalue")
-	
-	//cotainern i detta fall är HTMLkoden
-	var dishBrowser= this.dishBrowser = container.find("#dishBrowser");
-	var search = this.search = container.find("#search");
-
-
-
-	var searchword ="";
-	function showndishes(searchword){
-		//option = starter/main/dessert
-		var option = container.find("#coursebutton").find(":selected").data("type");
-		var dishes;
-		if (option == 'starter'){
-			dishes =  model.getAllDishes(option, searchword)
-
+	this.searchbutton = container.find("#search");
+	var searchvalue= this.searchvalue = container.find("#searchvalue");
+	var dishesshow = this.dishesshow = container.find("#dishesshow");
+	var searchstring ="";
+	var dishes;
+	function viewThis(){
+		var course = container.find("#coursebutton").find(":selected").data("type");
+		if(!(searchstring =="")){
+			dishes = model.getAllDishes(course, searchstring);
 		}
-		if(!(searchword =="")){
-			//all dishes that contains the searchword
-			dishes = model.getAllDishes(option, searchword);
-				//all dishes that contains the selected course
-		} 
 		else { 
-			dishes = model.getAllDishes(option);
+			dishes = model.getAllDishes(course);
 		}
-		
+
 		var html="";
-		var check = 0;
-		//i++ means that it is tha value i? increments the variable but returns the old value
-		//.length is the amount of chars in dishes
-		for (i=0; i<dishes.length; i++){
-			html+= "<div id='picture1' class='thumbnail'" + dishes[i].id + "''>"
-			+ "<img src='images/" + dishes[i].image + "'>"
+		for (k in dishes){
+			html+= '<div class="col-xs-6 col-md-3">'
+	      	+ '<a href="#" class="thumbnail">' 
+	      	+ '<img src="images/' + dishes[k].image + '">'
 			+ "</div>";
 		}
-		dishBrowser.html(html);
+		dishesshow.html(html);
 	}
 
 
-
-	
-
-	this.update = function(str){
-		showndishes(str);
+	this.update = function(){
+		viewThis();
 	}
 
+	model.addObserver(this);
 
-
-	showndishes(searchword);
-
-
-
+	viewThis();
 }
