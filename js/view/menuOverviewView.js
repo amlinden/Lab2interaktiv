@@ -1,9 +1,7 @@
 var MenuOverviewView = function (container, model) {
-	var confirmDishButton = this.confirmDishButton = container.find("#confirmdish");
 
+	var finishButton = this.finishButton = container.find("#finishButton");
 	var menuView = this.menuView = container.find("#menuView");
-
-	$("#preparationView").hide();
 
 	function viewThis(){
 
@@ -38,9 +36,8 @@ var MenuOverviewView = function (container, model) {
 	      	+ '<p>' + prices[k] + 'kr</p>'
 	    	+ '</div>';
     	}
-    	//console.log(htmlCode);
+    	
     	menuView.html(htmlCode);
-
 	}
 
 	this.update = function(){
