@@ -24,21 +24,6 @@ var PreparationView = function(container, model){
 		dishIngredients.html(htmlIngredients);
 		dishDescription.html(dishToView.description);
 
-		/*
-
-	var ingredients = "";
-	var ingredientsArray = model.getDishIngredients(model.getDishToView());
-	for (i in ingArray){
-
-		ingredients += ingredientsArray[i].name + "\n";
-	}
-
-		this.dish.html(model.getDish(model.getDishToView()).name);
-		this.dishDescription.html(model.getDish(model.getDishToView()).description);
-		this.dishIngredients.html(ingredients)
-		this.dishImage.html(model.getDish(model.getDishToView()).image);
-	
-	*/
 	}
 
 	this.update = function(){

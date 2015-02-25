@@ -4,7 +4,6 @@ var MenuOverviewView = function (container, model) {
 	var menuView = this.menuView = container.find("#menuView");
 
 	$("#preparationView").hide();
-	$("#exampleView").hide();
 
 	function viewThis(){
 
