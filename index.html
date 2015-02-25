@@ -193,40 +193,28 @@
     </div>
     </div>
   </div> -->
-
   <div id="selecteddish">
+  <div>
     <span id="dishImage"></span>
     <p><span id="dishDescription"></span></p>
     <button id="backButton" class="btn btn-default" type="button" float:right; >Go back to select dish</button>
   </div>
-  <div id="ingredients">
+  <div>
 
-    <h2>Ingredients for 4 people</h2>
-
-    <p>
-    2 tbsp    olive oil             SEK     20  
-    </p>
-    <p>
-    2 tbsp    olive oil             SEK     20  
-    </p>
-
-<p>
-    2 tbsp    olive oil             SEK     20  
-    </p>
-<p>
-    2 tbsp    olive oil             SEK     20  
-    </p>
-<p>
-    2 tbsp    olive oil             SEK     20  
-    </p>
-<p>SEK     100  </p>
+    <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
+    <span id="ingredientList"></span>
+<p>SEK     <span id="totalPrice"></span>  </p>
 
     </br>
     </br>
-    <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
+    <input id="confirmDishButton" class="btn btn-default" type="button" value="Confirm Dish">
     </div>
+  </div>
   
-
+<div class="row" id="menuOverviewView">
+    <span id="menuView"></span>
+    <input id="finishButton" class="btn btn-default" type="button" value="Confirm Dish" >  
+</div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
