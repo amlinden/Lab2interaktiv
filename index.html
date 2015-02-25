@@ -84,6 +84,15 @@
     width:400px;
     padding:10px;    
 }
+	#goback {     
+    line-height:30px;
+    background-color:white; opacity: 0.75;
+    color:black;
+    font-family: "Century gothic", century, sans-serif;
+    width:100%;
+    float:right;
+    padding:15px;    
+}
   </style>
 
   	<div id="header">
@@ -162,7 +171,7 @@
   </div>
 
 
-  <div  id="dishesView" class="containerpictures">
+  <div  id="dishesshow" class="containerpictures">
   <div id="pictures" class="row">
   	<span id="dishesview"></span>
     <!-- storlev på fotona      ovan är alext menuview
@@ -193,28 +202,47 @@
     </div>
     </div>
   </div> -->
+
   <div id="selecteddish">
-  <div>
-    <span id="dishImage"></span>
-    <p><span id="dishDescription"></span></p>
-    <button id="backButton" class="btn btn-default" type="button" float:right; >Go back to select dish</button>
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKLyKBhMTssRbyPi_v31G2ncvWotO4VcQC_RsctcjZaip4hK1lKQ" class="img-rounded" width="500" float:right; alt="...">
+    <p>Själva redovisningen består av att ni lämnar in URL:ar till adresserna där dina filer ligger på en webbserver. Skriv även namnet på din eventuelle labpartner, samt hur många poäng du aspirerar på att få.</p>
+    <button id="gobacktoselecteddish" class="btn btn-default" type="button" float:right; >Go back to select dish</button>
   </div>
-  <div>
+  <div id="ingredients">
 
-    <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
-    <span id="ingredientList"></span>
-<p>SEK     <span id="totalPrice"></span>  </p>
+    <h2>Ingredients for 4 people</h2>
+
+    <p>
+    2 tbsp    olive oil             SEK     20  
+    </p>
+    <p>
+    2 tbsp    olive oil             SEK     20  
+    </p>
+
+<p>
+    2 tbsp    olive oil             SEK     20  
+    </p>
+<p>
+    2 tbsp    olive oil             SEK     20  
+    </p>
+<p>
+    2 tbsp    olive oil             SEK     20  
+    </p>
+<p>SEK     100  </p>
 
     </br>
     </br>
-    <input id="confirmDishButton" class="btn btn-default" type="button" value="Confirm Dish">
+    <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
     </div>
-  </div>
+   <div id ="menuOverviewView">
+    <div id="Goback">
+    <h3>My dinner 4 people<button class="btn btn-default" type="button" style="float: right;" >Go back and edit dinner</button></h3>
+   
+  	</div>
+  	</div>
+  	<span id="menuView"><span>
   
-<div class="row" id="menuOverviewView">
-    <span id="menuView"></span>
-    <input id="finishButton" class="btn btn-default" type="button" value="Confirm Dish" >  
-</div>
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -230,13 +258,8 @@
 	<script src="js/controler/mydinnercontroler.js"></script>
 	<script src="js/view/dishesView.js"></script>
 	<script src="js/controler/dishescontroler.js"></script>
-  <script src="js/view/menuOverviewView.js"></script>
-  <script src="js/controler/menuOverviewController.js"></script>
-  <script src="js/view/preparationView.js"></script>
-  <script src="js/controler/preparationController.js"></script>
-  <script src="js/view/selectedDishView.js"></script>
-  <script src="js/controler/selectedDishController.js"></script>
-
+	<script src="js/view/menuOverviewView.js"></script>
+  	<script src="js/controler/menuOverviewController.js"></script>
 
 	<!--<script src="js/view/exampleViewController.js"></script>-->
   </body>
