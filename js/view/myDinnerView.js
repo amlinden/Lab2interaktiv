@@ -1,4 +1,3 @@
-
 var MyDinnerView = function(container, model){
 //var är globalt
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
