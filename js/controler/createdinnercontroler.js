@@ -4,9 +4,5 @@ var Createdinnercontroler = function(view, model){
 		$("#firstview").hide();
 		$("#myDinnerView").show();
  		$("#selectdishes").show();
-		$("#dishesView").show();
-		
-
-	
 	});
 }
