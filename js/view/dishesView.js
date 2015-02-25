@@ -1,5 +1,5 @@
 var DishesView = function (container, model) {
-
+	$("#selecteddish").hide();
 	this.searchbutton = container.find("#search");
 	var searchvalue= this.searchvalue = container.find("#searchvalue");
 	var dishesshow = this.dishesshow = container.find("#dishesshow");
