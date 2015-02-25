@@ -5,7 +5,7 @@ $(function() {
 
 	var createdinnerview = new CreatedinnerView($("#firstview"), model);
 	var myDinnerView = new MyDinnerView($("#myDinnerView"), model);
-//	var dishesView = new DishesView($("#dishesView"), model);
+	var dishesView = new DishesView($("#dishesView"), model);
 
 
 	var preparationView = new PreparationView($("#preparationView"), model);
@@ -20,9 +20,9 @@ $(function() {
 	var selectedDishController = new SelectedDishController(selectedDishView, model);
 
 	var createdinnercontroler = new Createdinnercontroler(createdinnerview, model);
-	//var mydinnercontroler = new Mydinnercontroler(myDinnerView, model);
+	var mydinnercontroler = new Mydinnercontroler(myDinnerView, model);
 
-//	var dishescontroler = new Dishescontroler(dishesView, model);
+	var dishescontroler = new Dishescontroler(dishesView, model);
 
 
 });

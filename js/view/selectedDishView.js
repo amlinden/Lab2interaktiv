@@ -1,5 +1,5 @@
 var SelectedDishView = function(container, model){
-	$("#selecteddish").hide();
+	//$("#selecteddish").hide();
 	var backButton = this.backButton = container.find("#backButton");
 	var dishImage = this.dishImage = container.find("#dishImage");
 	var dishDescription = this.dishDescription = container.find("#dishDescription");
