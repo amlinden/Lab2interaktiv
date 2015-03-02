@@ -4,12 +4,10 @@ $(function() {
 	//var dishesView = new dishesView();
 
 
-//views
+//views  TAR IN ID FRÅN INDEX.HTML SKICKAR TILL VIEW
 	var createdinnerview = new CreatedinnerView($("#firstview"), model);
 	var myDinnerView = new MyDinnerView($("#myDinnerView"), model);
 	var dishesView = new DishesView($("#thirdview"), model);
-	
-
 	var selectedDishView = new SelectedDishView($("#selecteddish"), model);
 	var menuOverviewView = new MenuOverviewView($("#menuOverviewView"), model);
 	var preparationView = new PreparationView($("#preparationView"), model);

@@ -3,6 +3,7 @@ var DishesView = function (container, model) {
 	this.searchbutton = container.find("#search");
 	var searchvalue= this.searchvalue = container.find("#searchvalue");
 	var coursebutton= this.coursebutton = container.find("#coursebutton");
+	this.dishbutton = container.find("#dishButton");
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
 

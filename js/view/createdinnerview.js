@@ -6,7 +6,7 @@ var CreatedinnerView = function(container, model){
 	$("#ingredients").hide();
 	$("#menuOverviewView").hide();
 	$("#Goback").hide();
-	$("#selecteddish").hide();
+	$("#selecteddish").show();
 	
 }
 
