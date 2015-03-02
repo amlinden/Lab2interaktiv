@@ -15,7 +15,7 @@ var Dishescontroler = function(view, model){
 		$("#selecteddish").show();
 		$("#dishesview").hide();
 		$("#thirdview").hide();
-		console.log("funkar");
+
 	});
 
 
