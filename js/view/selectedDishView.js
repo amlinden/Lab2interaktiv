@@ -5,7 +5,7 @@ var SelectedDishView = function(container, model){
 	var totalPrice = this.totalPrice = container.find("#totalPrice");
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
 
-	var ingredients = this.ingredients = container.find("#ingredients");
+	var ingredientlist = this.ingredientlist = container.find("#ingredients");
 
 
 	var confirmDishButton = this.confirmDishButton = container.find("#confirmDishButton");
@@ -43,14 +43,8 @@ var SelectedDishView = function(container, model){
 		}
 
 
-<<<<<<< HEAD
-		ingredientList.html(htmlIngredients);
-=======
+		ingredientlist.html(htmlingredients);
 
-		ingredients.html(htmlingredients);
-		console.log(htmlingredients);
-
->>>>>>> origin/ny-branch
 	}
 
 	this.update = function(){
