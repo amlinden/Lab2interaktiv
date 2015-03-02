@@ -4,7 +4,7 @@ var SelectedDishView = function(container, model){
 	var dishDescription = this.dishDescription = container.find("#dishDescription");
 	var totalPrice = this.totalPrice = container.find("#totalPrice");
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
-	var ingredientList = this.ingredientList = container.find("#ingredients");
+	var ingredients = this.ingredients = container.find("#ingredients");
 	var confirmDishButton = this.confirmDishButton = container.find("#confirmDishButton");
 
 	function viewThis(){
@@ -21,8 +21,8 @@ var SelectedDishView = function(container, model){
 		dishImage.html(imageHTML);
 
 		dishDescription.html(dishToView.description);
+		
 		numberOfGuests.html(model.getNumberOfGuests());
-
 		var htmlIngredients = '';
 		for(k in dishToView.ingredients){
 			htmlIngredients += '<p>' 
@@ -37,7 +37,8 @@ var SelectedDishView = function(container, model){
 		}
 
 
-		ingredientList.html(htmlIngredients);
+		ingredients.html(htmlIngredients);
+		console.log(htmlIngredients);
 	}
 
 	this.update = function(){
