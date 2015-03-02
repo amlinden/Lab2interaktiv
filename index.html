@@ -79,17 +79,21 @@
 }
 
 	#selecteddish{
-      float: left;
+      float:left;
       color:white;
-      width:30%;
+      width:70%;
       padding:15px;
     }
+    #imagetext{
+    float:left;
+    width:50%;
+}
     #ingred {
+      float:left;
     background-color:black;
     opacity: 0.75;
     color:white;
     font-family: "Century gothic", century, sans-serif;   
-    float:right;
     width:400px;
     padding:10px;    
 }
@@ -189,13 +193,14 @@
 
 
   <div id="selecteddish">
-
-  	<span id="dishImage"></span>
-    <p><span id="dishDescription"></span></p>
-    <button id="backButton" class="btn btn-default" type="button" float:right; >Back to seleced dish</button>
+    <div id="imagetext">
+    	<span id="dishImage"></span>
+      <p><span id="dishDescription"></span></p>
+      <button id="backButton" class="btn btn-default" type="button" float:right; >Back to seleced dish</button>
+    </div>
     <div id="ingred">
       <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
-      <span id="ingredients"></span>
+      <div id="ingredients"></div>
   	  	<p>SEK     <span id="totalPrice"></span>  </p>
   	    </br>
   	    </br>
