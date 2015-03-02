@@ -84,7 +84,7 @@
       width:30%;
       padding:15px;
     }
-    #ingredients {
+    #ingred {
     background-color:black;
     opacity: 0.75;
     color:white;
@@ -189,15 +189,18 @@
 
 
   <div id="selecteddish">
+
   	<span id="dishImage"></span>
     <p><span id="dishDescription"></span></p>
-    <button id="backButton" class="btn btn-default" type="button" float:right; >Go back to select dish</button>
-    <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
-    <span id="ingredients"></span>
-	  	<p>SEK     <span id="totalPrice"></span>  </p>
-	    </br>
-	    </br>
-    <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
+    <button id="backButton" class="btn btn-default" type="button" float:right; >Back to seleced dish</button>
+    <div id="ingred">
+      <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
+      <span id="ingredients"></span>
+  	  	<p>SEK     <span id="totalPrice"></span>  </p>
+  	    </br>
+  	    </br>
+      <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
+    </div>
   </div>
 
 
@@ -216,7 +219,7 @@
 
 
 
-  
+
 
   <div id ="menuOverviewView">
 		<div id="Goback">
@@ -247,11 +250,11 @@
 	<script src="js/controler/mydinnercontroler.js"></script>
 	<script src="js/view/dishesView.js"></script>
 	<script src="js/controler/dishescontroler.js"></script>
-  <script src="js/view/preparationView.js"></script>
   <script src="js/view/selectedDishView.js"></script>
   <script src="js/controler/selectedDishController.js"></script>
   <script src="js/view/menuOverviewView.js"></script>
   <script src="js/controler/menuOverviewController.js"></script>
+  <script src="js/view/preparationView.js"></script>
 
 	<!--<script src="js/view/exampleViewController.js"></script>-->
   </body>
