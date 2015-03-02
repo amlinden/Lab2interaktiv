@@ -3,14 +3,14 @@ var DishesView = function (container, model) {
 	this.searchbutton = container.find("#search");
 	var searchvalue= this.searchvalue = container.find("#searchvalue");
 	var coursebutton= this.coursebutton = container.find("#coursebutton");
-	this.dishbutton = container.find("#dishButton");
+	//this.dishbutton = container.find("#dishButton");
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
 
 	
 	//var dishButton = this.dishButton = container.find("#dishButton");
 	//varje knapp får egen funktion
-	container.on('click', '.dish .dish-button', function() {
+	var dishbutton = this.dishbutton = container.on('click', '.dish .dish-button', function() {
 		$(this).attr('data-id');
 	});
 	
