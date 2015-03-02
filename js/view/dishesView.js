@@ -2,15 +2,13 @@ var DishesView = function (container, model) {
 	
 	this.searchbutton = container.find("#search");
 	var searchvalue= this.searchvalue = container.find("#searchvalue");
-	var coursebutton= this.coursebutton = container.find("#coursebutton");
-
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
-
-	var dishbutton = this.dishbutton = container.on(function() {
-		$(this).attr('data-id');
-	});
+	this.coursebutton = container.find("coursebutton");
 	
+	//var dishbutton = this.dishbutton = container.on(function(){
+	//	$(this).attach('data-id');
+	//	});	
 	function viewThis(searchstring){
 		var course = container.find("#coursebutton").find(":selected").data("type");
 		var dishes;
