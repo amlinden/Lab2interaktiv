@@ -4,7 +4,10 @@ var SelectedDishView = function(container, model){
 	var dishDescription = this.dishDescription = container.find("#dishDescription");
 	var totalPrice = this.totalPrice = container.find("#totalPrice");
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
-	var ingredientList = this.ingredientList = container.find("#ingredients");
+
+	var ingredients = this.ingredients = container.find("#ingredients");
+
+
 	var confirmDishButton = this.confirmDishButton = container.find("#confirmDishButton");
 
 	function viewThis(){
@@ -23,9 +26,12 @@ var SelectedDishView = function(container, model){
 		dishDescription.html(dishToView.description);
 		
 		numberOfGuests.html(model.getNumberOfGuests());
-		var htmlIngredients = '';
+
+
+		var htmlingredients = '';
+
 		for(k in dishToView.ingredients){
-			htmlIngredients += '<p>' 
+			htmlingredients += '<p>' 
 			+ model.getNumberOfGuests()*dishToView.ingredients[k].quantity 
 			+ ' ' 
 			+ dishToView.ingredients[k].unit 
@@ -37,7 +43,14 @@ var SelectedDishView = function(container, model){
 		}
 
 
+<<<<<<< HEAD
 		ingredientList.html(htmlIngredients);
+=======
+
+		ingredients.html(htmlIngredients);
+		console.log(htmlIngredients);
+
+>>>>>>> origin/ny-branch
 	}
 
 	this.update = function(){

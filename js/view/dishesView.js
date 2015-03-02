@@ -7,7 +7,7 @@ var DishesView = function (container, model) {
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
 
-	var dishbutton = this.dishbutton = container.on('click', '.dish .dish-button', function() {
+	var dishbutton = this.dishbutton = container.on(function() {
 		$(this).attr('data-id');
 	});
 	

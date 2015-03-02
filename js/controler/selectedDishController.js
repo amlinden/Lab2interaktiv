@@ -5,6 +5,7 @@ var SelectedDishController = function(view, model){
  		$("#selectdishes").hide();
 		$("#dishesView").hide();
 		$("#menuOverviewView").hide();
+		$("#thirdview").show();
 	});
 
 	view.confirmDishButton.click(function(){

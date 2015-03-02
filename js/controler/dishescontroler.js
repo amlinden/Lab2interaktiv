@@ -1,7 +1,7 @@
 var Dishescontroler = function(view, model){
 	
 	view.coursebutton.click(function(){
-		$("#dishesview").show();
+		
 	});
 
 	
@@ -11,13 +11,13 @@ var Dishescontroler = function(view, model){
 		view.update(searchstring);
 	});
 
-	view.dishbutton.click(function(){
+	//view.dishbutton.click(function(){
 		
-		$("#dishesview").hide();
-		$("#thirdview").hide();
-		$("#selecteddish").show();
+	//	$("#dishesview").hide();
+	//	$("#thirdview").hide();
+	//	$("#selecteddish").show();
 
-	});
+	//});
 
 
 		
