@@ -47,8 +47,8 @@ var SelectedDishView = function(container, model){
 		ingredientList.html(htmlIngredients);
 =======
 
-		ingredients.html(htmlIngredients);
-		console.log(htmlIngredients);
+		ingredients.html(htmlingredients);
+		console.log(htmlingredients);
 
 >>>>>>> origin/ny-branch
 	}
