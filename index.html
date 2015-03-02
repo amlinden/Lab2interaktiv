@@ -79,17 +79,21 @@
 }
 
 	#selecteddish{
-      float: left;
+      float:left;
       color:white;
-      width:30%;
+      width:70%;
       padding:15px;
     }
+    #imagetext{
+    float:left;
+    width:50%;
+}
     #ingred {
+      float:left;
     background-color:black;
     opacity: 0.75;
     color:white;
     font-family: "Century gothic", century, sans-serif;   
-    float:right;
     width:400px;
     padding:10px;    
 }
@@ -189,13 +193,14 @@
 
 
   <div id="selecteddish">
-
-  	<span id="dishImage"></span>
-    <p><span id="dishDescription"></span></p>
-    <button id="backButton" class="btn btn-default" type="button" float:right; >Back to seleced dish</button>
+    <div id="imagetext">
+    	<span id="dishImage"></span>
+      <p><span id="dishDescription"></span></p>
+      <button id="backButton" class="btn btn-default" type="button" float:right; >Back to seleced dish</button>
+    </div>
     <div id="ingred">
       <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
-      <p>230 g extra lean ground beef       SEK 40</p><p>1.4 g sea salt       SEK 6</p><p>0.5  small onion, diced       SEK 4</p><p>1.4 g garlic salt       SEK 4</p><p>1.2 g Italian seasoning       SEK 6</p><p>0.6 g dried oregano       SEK 6</p><p>1.2 g crushed red pepper flakes       SEK 6</p><p>12 ml Worcestershire sauce       SEK 14</p><p>40 ml milk       SEK 8</p><p>10 g grated Parmesan cheese       SEK 16</p><p>30 g seasoned bread crumbs       SEK 8</p>
+      <div id="ingredients"></div>
   	  	<p>SEK     <span id="totalPrice"></span>  </p>
   	    </br>
   	    </br>
