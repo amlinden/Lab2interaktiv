@@ -2,8 +2,10 @@ var DishesView = function (container, model) {
 	
 	this.searchbutton = container.find("#search");
 	var searchvalue= this.searchvalue = container.find("#searchvalue");
+	var coursebutton= this.coursebutton = container.find("#coursebutton");
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
+
 	
 	//var dishButton = this.dishButton = container.find("#dishButton");
 	//varje knapp får egen funktion
@@ -23,10 +25,10 @@ var DishesView = function (container, model) {
 
 		var html="";
 		for(k=0; k<dishes.length; k++){
-			html+= '<div class="col-xs-6 col-md-3">'
+			html+= '<div id="rutor" class="col-xs-6 col-md-3">'
 	      	+ '<a href="#" class="thumbnail">' 
-	      	+ '<img src="images/' + dishes[k].image + '">'
-	      	+ '<button id="dishButton" data-id="' + dishes[k].id + '" class="btn btn-default" type="button" style="float: right;" >' + dishes[k].name + '</button>'
+	      	+ '<img src="images/' + dishes[k].image + '"HEIGHT="140" WIDTH="150" alt="...">'
+	      	+ '<button id="dishButton" data-id="' + dishes[k].id + '" class="btn btn-default" type="button" style="float:left;" >' + dishes[k].name + '</button>'
 			+ "</div>";
 			
 		}

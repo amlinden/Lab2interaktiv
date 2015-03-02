@@ -7,7 +7,7 @@ $(function() {
 //views
 	var createdinnerview = new CreatedinnerView($("#firstview"), model);
 	var myDinnerView = new MyDinnerView($("#myDinnerView"), model);
-	var dishesView = new DishesView($("#dishesshow"), model);
+	var dishesView = new DishesView($("#thirdview"), model);
 	
 
 	var selectedDishView = new SelectedDishView($("#selecteddish"), model);
