@@ -11,7 +11,7 @@ var Dishescontroler = function(view, model){
 		view.update(searchstring);
 	});
 
-	view.dishbutton.click(function(){
+	view.dishesshow.click(function(){
 		
 		$("#dishesview").hide();
 		$("#thirdview").hide();
