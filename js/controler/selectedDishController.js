@@ -2,10 +2,11 @@ var SelectedDishController = function(view, model){
 
 	view.backButton.click(function(){
 		$("#selecteddish").hide();
- 		$("#selectdishes").hide();
-		$("#dishesView").hide();
 		$("#menuOverviewView").hide();
+		$("#selectdishes").show();
 		$("#thirdview").show();
+		$("#dishesview").show();
+
 	});
 
 	view.confirmDishButton.click(function(){
@@ -14,5 +15,6 @@ var SelectedDishController = function(view, model){
 		$("#dishesView").show();
  		$("#selectdishes").hide();
 		$("#menuOverviewView").show();
+
 	});
 }

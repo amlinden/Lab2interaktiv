@@ -14,10 +14,6 @@ $(function() {
 
 
 
-
-
-
-
 	//controlers
 	var createdinnercontroler = new Createdinnercontroler(createdinnerview, model);
 	var mydinnercontroler = new Mydinnercontroler(myDinnerView, model);
