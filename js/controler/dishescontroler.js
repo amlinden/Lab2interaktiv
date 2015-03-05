@@ -16,6 +16,7 @@ var Dishescontroler = function(view, model){
 		$("#dishesview").hide();
 		$("#thirdview").hide();
 		$("#selecteddish").show();
+		$("#ingredients").show();
 	});
 
 

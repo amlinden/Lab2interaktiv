@@ -106,6 +106,7 @@
     float:right;
     padding:15px;    
 }
+
   </style>
 
   	<div id="header">
@@ -190,11 +191,11 @@
     <div id="imagetext">
     	<span id="dishImage"></span>
       <p><span id="dishDescription"></span></p>
-      <button id="backButton" class="btn btn-default" type="button" float:right; >Back to seleced dish</button>
+      <button id="backButton" class="btn btn-default" type="button" float:right; >Back to select dish</button>
     </div>
     <div id="ingred">
       <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
-      <p><span id="ingredients" style="/* display: none; */"></span></p>
+      <p><div id="ingredients" style="display:all;"></div></p>
   	  	<p>SEK     <span id="totalPrice"></span>  </p>
   	    </br>
   	    </br>
@@ -222,7 +223,7 @@
 
   <div id ="menuOverviewView">
 		<div id="Goback">
-	    <h3>My dinner 4 people<button class="btn btn-default" type="button" style="float: right;" >Go back and edit dinner</button></h3>
+	    <h3>My dinner 4 people<button id="gobackbutton" class="btn btn-default" type="button" style="float: right;" >Go back and edit dinner</button></h3>
 	  	</div>
 	  	<span id="menuView"><span>
 	 </div>

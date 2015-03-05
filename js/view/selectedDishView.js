@@ -4,11 +4,9 @@ var SelectedDishView = function(container, model){
 	var dishDescription = this.dishDescription = container.find("#dishDescription");
 	var totalPrice = this.totalPrice = container.find("#totalPrice");
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
-
 	var ingredientlist = this.ingredientlist = container.find("#ingredients");
 
-
-	var confirmDishButton = this.confirmDishButton = container.find("#confirmDishButton");
+	var confirmDishButton = this.confirmDishButton = container.find("#confirmdish");
 
 	function viewThis(){
 
