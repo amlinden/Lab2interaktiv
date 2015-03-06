@@ -7,7 +7,7 @@ var MyDinnerView = function(container, model){
 
 	function viewThis(){
 		numberOfGuests.html(model.getNumberOfGuests(2));
-
+		//for (k in model.)
 	}
 
 	this.update = function(){

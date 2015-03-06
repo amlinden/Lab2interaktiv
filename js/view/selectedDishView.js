@@ -6,6 +6,7 @@ var SelectedDishView = function(container, model){
 	var numberOfGuests = this.numberOfGuests = container.find("#numberOfGuests");
 	var ingredientlist = this.ingredientlist = container.find("#ingredients");
 
+	var cost = this.cost = container.find("#cost");
 	var confirmDishButton = this.confirmDishButton = container.find("#confirmdish");
 
 	function viewThis(){
@@ -17,6 +18,7 @@ var SelectedDishView = function(container, model){
 			dishPrice += dishToView.ingredients[i].price;
 		}
 		totalPrice.html(model.getNumberOfGuests()*dishPrice);
+		//cost.html(model.getNumberOfGuests()*dishPrice);
 
 		imageHTML = '<img src="images/' + dishToView.image + '"class="img-rounded" width="220" float:right; alt="..."">';
 		dishImage.html(imageHTML);
