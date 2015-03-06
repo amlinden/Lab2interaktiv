@@ -4,10 +4,17 @@ var MyDinnerView = function(container, model){
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	var dish = this.dish = container.find("#dish");
+	var cost = this.cost = container.find("#cost");
 
 	function viewThis(){
+		dishToView = model.getDish(model.getDishToView());
+
+		var dishPrice = 0;
+		for(i in dishToView.ingredients){
+			dishPrice += dishToView.ingredients[i].price;
+		}
 		numberOfGuests.html(model.getNumberOfGuests(2));
-		//for (k in model.)
+		cost.html(model.getNumberOfGuests()*dishPrice);
 	}
 
 	this.update = function(){

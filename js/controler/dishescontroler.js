@@ -12,9 +12,9 @@ var Dishescontroler = function(view, model){
 	});
 
 	view.dishesshow.click(function(){
-		
 		$("#dishesview").hide();
 		$("#thirdview").hide();
+		$("#myDinnerView").show();
 		$("#selecteddish").show();
 		$("#ingredients").show();
 	});

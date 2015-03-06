@@ -37,7 +37,7 @@ var DishesView = function (container, model) {
 		viewThis(searchstring);
 	}
 
-	//model.addObserver(this);
+	model.addObserver(this);
 
 	viewThis(searchstring);
 }
