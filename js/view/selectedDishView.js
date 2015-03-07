@@ -18,7 +18,7 @@ var SelectedDishView = function(container, model){
 			dishPrice += dishToView.ingredients[i].price;
 		}
 		totalPrice.html(model.getNumberOfGuests()*dishPrice);
-		//cost.html(model.getNumberOfGuests()*dishPrice);
+		cost.html(model.getNumberOfGuests()*dishPrice);
 
 		imageHTML = '<img src="images/' + dishToView.image + '"class="img-rounded" width="220" float:right; alt="..."">';
 		dishImage.html(imageHTML);
