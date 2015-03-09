@@ -4,10 +4,10 @@ var DishesView = function (container, model) {
 	var searchvalue= this.searchvalue = container.find("#searchvalue");
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
-	this.coursebutton = container.find("coursebutton");
+	this.coursebutton = container.find("#coursebutton");
 	
 	//var dishbutton = this.dishbutton = container.on(function(){
-	//	$(this).attach('data-id');
+	//	$(this).attr('data-id');
 	//	});	
 	function viewThis(searchstring){
 		var course = container.find("#coursebutton").find(":selected").data("type");

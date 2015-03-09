@@ -132,6 +132,22 @@ var DinnerModel = function() {
 		//this.model.notify(); 
 	}
 
+	function getRecipeJson() {
+		var apiKey = "your-api-key-here";
+		var recipeID = 196149;
+		var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
+		$.ajax({
+		         type: "GET",
+		         dataType: 'json',
+		         cache: false,
+		         url: url,
+		         success: function (data) {
+		            alert('success');
+		            console.log(data);
+		            }
+		});
+	}
+
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
