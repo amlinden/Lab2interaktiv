@@ -10,7 +10,7 @@ var SelectedDishController = function(view, model){
 	});
 
 	view.confirmDishButton.click(function(){
-		model.addDishToMenu(200);
+		model.addDishToMenu(model.getDishToView());
 		$("#selecteddish").hide();
 		$("#dishesview").show();
 		$("#thirdview").show();

@@ -5,6 +5,7 @@ var MyDinnerView = function(container, model){
 	this.minusButton = container.find("#minusGuest");
 	var dish = this.dish = container.find("#dishname");
 	var cost = this.cost = container.find("#cost");
+	var createDinnerButton = this.createDinnerButton = container.find("#createDinner");
 
 	function viewThis(){
 
