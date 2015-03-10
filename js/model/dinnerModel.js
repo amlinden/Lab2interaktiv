@@ -83,7 +83,6 @@ var DinnerModel = function() {
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-
 		if (this.getDish(id).type == 'starter'){
 			menu[0] = id;
 		}
@@ -93,9 +92,8 @@ var DinnerModel = function() {
 		else if (this.getDish(id).type == 'dessert'){
 			menu[2] = id;
 		}
-
 		this.notifyObserver();
-		
+		//this.model.notify(); 
 	}
 
 	//Removes dish from menu
@@ -134,17 +132,20 @@ var DinnerModel = function() {
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
+		return this.getRecipeJson(id);
+		/*
 	  for(key in dishes){
 			if(dishes[key].id == id) {
 				return dishes[key];
 			}
 		}
+		*/
 		//this.model.notify(); 
 	}
 
-	function getRecipeJson() {
-		var apiKey = "your-api-key-here";
-		var recipeID = 196149;
+	this.getRecipeJson = function (id) {
+		var apiKey = "dvxp9gZl8JGzQG3ZdDHjWma6um8Yi0O7";
+		var recipeID = id;
 		var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
 		$.ajax({
 		         type: "GET",
@@ -153,6 +154,7 @@ var DinnerModel = function() {
 		         url: url,
 		         success: function (data) {
 		            alert('success');
+		            //this.notifyObserver();
 		            console.log(data);
 		            }
 		});

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTTP Request Asnyc</title>
+<script>
+syncRequest = function () {
+var request = new XMLHttpRequest();
+// You need to get your API key from api.BigOven.com
+request.open('GET', 'http://api.bigoven.com/recipes?pg=1&rpp=10&api_key=dvxp9gZl8JGzQG3ZdDHjWma6um8Yi0O7', true);
+request.onload = function(e) {
+if (request.readyState === 4) {
+if (request.status === 200) {
+console.log(request.responseText);
+} else {
+console.error(request.statusText);
+}
+}
+}
+request.onerror = function(e) {
+console.error(request.statusText);
+};
+request.send(null);
+};
+</script>
+</head>
+<body>
+<button onclick="syncRequest()">Send Request</button>
+<select>
+<option>A</option>
+<option>B</option>
+</select>
+</body>
+</html>
