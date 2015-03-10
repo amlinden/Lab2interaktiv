@@ -3,4 +3,8 @@ var MenuOverviewController = function (view, model){
 		$("#menuOverviewView").hide();
 	});
 
+	view.gobackbutton.click(function(){
+		$("#").hide();
+	});
+
 }
