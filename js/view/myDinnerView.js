@@ -18,7 +18,11 @@ var MyDinnerView = function(container, model){
 		//}
 		numberOfGuests.html(model.getNumberOfGuests(2));
 		//cost.html(model.getNumberOfGuests()*dishPrice);
-		dish.html(model.getFullMenu());
+		var menu;
+		for(i in model.getFullMenu()){
+			menu += model.getFullMenu()[i].name;
+		}
+		dish.html(menu);
 	}
 
 	this.update = function(){
