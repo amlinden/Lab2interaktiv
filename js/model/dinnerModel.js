@@ -17,7 +17,7 @@ var DinnerModel = function() {
 	// and selected dinner options for dinner menu
 	var dishToView=100;
 	var numberOfGuests = 2;
-	var menu = [2, 100, 201];
+	var menu = [1, 100, 200];
 
 	this.setNumberOfGuests = function(num) {
 		if (num>0){
