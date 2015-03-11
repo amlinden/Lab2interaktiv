@@ -30,7 +30,7 @@ var PreparationView = function(container, model){
 			html += '<div id="left-column">' + 
       		'<img src="images/' + dishToView.image + '">' +
           	'</div>' +
-    		'<div id="middle-column">' +
+    		'<div id="left-column">' +
       		'<h2>' + dishToView.name + '</h2>' +
       		htmlIngredients + 
           	'</div>' +  
