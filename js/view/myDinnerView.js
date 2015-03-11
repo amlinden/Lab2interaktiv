@@ -18,8 +18,24 @@ var MyDinnerView = function(container, model){
 		//}
 		numberOfGuests.html(model.getNumberOfGuests(2));
 		//cost.html(model.getNumberOfGuests()*dishPrice);
+		var htmlDish = "";
+		var meny = model.getFullMenu();
+		for (i in meny){
+			htmlDish += "<p>" +meny[i].name + "</p>";
+		}
+		dish.html(htmlDish);
 
-		dish.html(model.getFullMenu(model.getDish()));
+		var htmlCost = "";
+		for (i in meny){
+			var dish1 = meny[i];
+			var dishPrice = 0;
+			for(k in dish1.ingredients){
+				dishPrice += dish1.ingredients[k].price;
+			}
+			htmlCost += "<p>" + dishPrice + " kr</p>";
+		}
+
+		cost.html(htmlCost);
 
 	}
 
