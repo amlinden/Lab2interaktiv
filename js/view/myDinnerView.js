@@ -16,25 +16,28 @@ var MyDinnerView = function(container, model){
 		//for(i in dishToView.ingredients){
 		//	dishPrice += dishToView.ingredients[i].price;
 		//}
-		numberOfGuests.html(model.getNumberOfGuests(2));
+		numberOfGuests.html(model.getNumberOfGuests());
 		//cost.html(model.getNumberOfGuests()*dishPrice);
 		var htmlDish = "";
 		var meny = model.getFullMenu();
 		for (i in meny){
 			htmlDish += "<p>" +meny[i].name + "</p>";
 		}
+		htmlDish += "<p> Total: </p>";
 		dish.html(htmlDish);
 
 		var htmlCost = "";
+		var totalPrice = 0;
 		for (i in meny){
 			var dish1 = meny[i];
 			var dishPrice = 0;
 			for(k in dish1.ingredients){
 				dishPrice += dish1.ingredients[k].price;
 			}
-			htmlCost += "<p>" + dishPrice + " kr</p>";
+			totalPrice += dishPrice;
+			htmlCost += "<p>" + model.getNumberOfGuests()*dishPrice + " kr</p>";
 		}
-
+		htmlCost += "<p>" + model.getNumberOfGuests()*totalPrice + " kr</p>";
 		cost.html(htmlCost);
 
 	}

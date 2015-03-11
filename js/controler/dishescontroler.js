@@ -24,6 +24,7 @@ var Dishescontroler = function(view, model){
 				$("#myDinnerView").show();
 				$("#selecteddish").show();
 				$("#ingredients").show();
+				$("#preparationView").hide();
 				view.update(searchstring);
 				viewThis();
 			});
