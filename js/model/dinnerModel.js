@@ -132,7 +132,8 @@ var DinnerModel = function() {
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
-		return this.getRecipeJson(id);
+		//return this.getRecipeJson(id);
+		console.log(this.getRecipeJson(id));
 		/*
 	  for(key in dishes){
 			if(dishes[key].id == id) {
@@ -154,8 +155,8 @@ var DinnerModel = function() {
 		         url: url,
 		         success: function (data) {
 		            alert('success');
-		            //this.notifyObserver();
-		            console.log(data);
+		            this.notifyObserver(data);
+		            //console.log(data);
 		            }
 		});
 	}
