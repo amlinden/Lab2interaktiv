@@ -1,21 +1,21 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
  	
- 	this._listener = [];
+ 	var _listener = [];
  		// add new observer to array
  	this.addObserver = function(listener){
-		this._listener.push(listener);
+		_listener.push(listener);
  	}
  		//calls the updated methos on all the observers in the arra
- 	this.notifyObserver = function(args){
- 		for (var i =0; i < this._listener.length; i++){
- 			this._listener[i].update(args);
+ 	function notifyObserver(args){
+ 		for (var i =0; i < _listener.length; i++){
+ 			_listener[i].update(args);
  		}
 	};
 
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
-	var dishToView=100;
+	var dishToView=167511;
 	var numberOfGuests = 2;
 	var menu = [2, 101, 200];
 
@@ -23,7 +23,7 @@ var DinnerModel = function() {
 		if (num>0){
 			numberOfGuests = num;
 		}
-		this.notifyObserver(); 
+		notifyObserver(); 
 	}
 
 	// should return 
@@ -33,7 +33,7 @@ var DinnerModel = function() {
 
 	this.setDishToView = function(id) {
 		dishToView = id;
-		this.notifyObserver();
+		notifyObserver();
 	}
 
 
@@ -92,7 +92,7 @@ var DinnerModel = function() {
 		else if (this.getDish(id).type == 'dessert'){
 			menu[2] = id;
 		}
-		this.notifyObserver();
+		notifyObserver();
 		//this.model.notify(); 
 	}
 
@@ -102,7 +102,7 @@ var DinnerModel = function() {
 		if(menu[this.getDish(id).type] == id){
 			delete menu[this.getDish(id).type];
 		}
-		this.notifyObserver();
+		notifyObserver();
 		//this.model.notify(); 
 	}
 
@@ -126,7 +126,7 @@ var DinnerModel = function() {
 		}
 	  	return dish.type == type && found;
 	  });
-	  this.notifyObserver();
+	  notifyObserver();
 	  //this.model.notify(); 	
 	}
 
@@ -145,6 +145,30 @@ var DinnerModel = function() {
 	}
 
 	this.getRecipeJson = function (id) {
+
+		/*
+		var apiKey = "dvxp9gZl8JGzQG3ZdDHjWma6um8Yi0O7";
+		var recipeID = id;
+		var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", url, true);
+		xhr.onload = function (e) {
+		  if (xhr.readyState === 4) {
+		    if (xhr.status === 200) {
+		      console.log(xhr);
+		    } else {
+		      console.error(xhr.statusText);
+		    }
+		  }
+		};
+		xhr.onerror = function (e) {
+		  console.error(xhr.statusText);
+		};
+		xhr.send(null);
+		*/
+
+
+		
 		var apiKey = "dvxp9gZl8JGzQG3ZdDHjWma6um8Yi0O7";
 		var recipeID = id;
 		var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
@@ -155,11 +179,31 @@ var DinnerModel = function() {
 		         url: url,
 		         success: function (data) {
 		            alert('success');
-		            this.notifyObserver(data);
+		            //notifyObserver(data);
 		            //console.log(data);
 		            }
 		});
+		console.log($.ajax());
+
 	}
+
+	function searchRecipeJson(searchstring) {
+        var apiKey = "dvxp9gZl8JGzQG3ZdDHjWma6um8Yi0O7";
+        var titleKeyword = searchstring;
+        var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+                  + titleKeyword 
+                  + "&api_key="+apiKey;
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            cache: false,
+            url: url,
+            success: function (data) {
+                alert('success');
+                console.log(data);
+            }
+        });
+    }
 
 
 	// the dishes variable contains an array of all the 
