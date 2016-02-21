@@ -15,25 +15,29 @@
   body {
   	background-image: url("http://static1.squarespace.com/static/519b1da1e4b005a0d6f42dc8/t/5334f793e4b01041ee379161/1395980325588/WholePantry_Website_web.jpg?format=1500w");
   }
+  
     #header {
+
+
     background-color:black;
     opacity: 0.75;
     color:white;
     font-family: "Century gothic", century, sans-serif;
     text-align:left;
-    padding:10px;
+    width: 100%;
+    padding: 10px;
   }
-  	section {
+  	#firstview {
+    position: fixed;
+    top: 240px;
     background-color:black;
     opacity: 0.75;
     text-align:left;
     color:white;
     font-family: "Century gothic", century, sans-serif;
-    position: absolute;
-    bottom: 0px;
-    float:left;
-    width:400px;
-    padding:10px;	 	 
+    padding:10px; 
+    width: 30%;
+
 }
     #myDinnerView {
     line-height:30px;
@@ -41,11 +45,18 @@
     color:white; 
     font-family: "Century gothic", century, sans-serif;
     background-color:black;
-    height:700px;
+    height:82%;
+
     width:25%;
     float:left;
-    padding:10px; 
+    padding:2%; 
     }
+    #selecteddish{
+    float:right;
+    color:white;
+    width:70%;
+    padding:15px;
+}
 
     #left-column{
     float: left;
@@ -82,12 +93,7 @@
     height: 5%;   
     }
 
-	  #selecteddish{
-    float:left;
-    color:white;
-    width:70%;
-    padding:15px;
-}
+
     #imagetext{
     float:left;
     width:50%;
@@ -115,45 +121,48 @@
     color: white;
     }
 
-  </style>
+</style>
 
-  	<div id="header">
-    	<h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
-  	</div>
-
-
+<div class="row">
+    <div class="col-sm-12 ">
+    	<div id="header">
+      	<h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
+    	</div>
+    </div>
+</div>
 
 <!--Block with text and button -->
-	<div id="firstview" class="container">
-		<section>
-	    <h2>A Home Dinner Service</h2>
+<div class="row">
+  <div class="col-sm-3 col-md-offset-0.5">
+    <div id="firstview">
+  	    <h2>A Home Dinner Service</h2>
+  	    <p>
+  	    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+  	    </p>
+  	    </br>
+  	    </br>
+  	    <p>
+  	    Start quickly
+  	    </p>
+  	    <button id="createDinner" class="btn btn-default" value="Create new dinner">Create Dinner</button>
+    </div>
+  </div>
+</div>
 
-	    <p>
-	    alsdkjfh asdklfjhads flkjh sdflkjh asdlfkjh asdlfkjh as lkjdshf öasdkfjh  laksjdfh llakjsdhf llkjdfh l
-	    akjsdhf akdsjhfg ljdsakjhf akdhfb 
-	    </p>
-	    </br>
-	    </br>
-	    <p>
-	    start quickly
-	    </p>
-	    <button id="createDinner" class="btn btn-default" value="Create new dinner">Create Dinner</button></a></section>
-	</div>
 
-	<div id="myDinnerView">
-
-	    <div id="nav">
-	      <h1>My Dinner</h1><br>
-	      
-	      <div id="left-column"> 
-	        <p>People</p>
-	        <div id="numberOfGuests"><input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10"></div>
-	        <br><br>
-
-	        <p>Dishname<br><div id="dishname"></p>
-	        </div>
-          <br>
-	        <button id="createDinner" class="btn btn-default" value="Confirm dinner">Confirm Dinner</button>
+<div class="row">
+<div id="myDinnerView">
+  <div id="nav">
+    <h1>My Dinner</h1><br>     
+    <div id="left-column"> 
+      <p>People</p>
+      <div id="numberOfGuests"><input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10"></div>
+      <br><br>
+      <p>Dishname<br>
+      <div id="dishname"></p>
+      </div>
+      
+      <button id="createDinner" class="btn btn-default" value="Confirm dinner">Confirm Dinner</button>
 	      </div>
 
 	      <div id="right-column"> 
@@ -163,9 +172,11 @@
 	        <br>
 	        <p>Cost</br><span id="cost"></span></p>
 	        <br>
-	      </div>
-        </div>
-  	</div>
+	   </div>
+    </div>
+  </div>
+
+
 
   
 	<div id="thirdview">
