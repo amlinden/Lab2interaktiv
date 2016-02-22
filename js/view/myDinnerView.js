@@ -17,7 +17,6 @@ var MyDinnerView = function(container, model){
 		//	dishPrice += dishToView.ingredients[i].price;
 		//}
 		numberOfGuests.html(model.getNumberOfGuests());
-		//cost.html(model.getNumberOfGuests()*dishPrice);
 		var htmlDish = "";
 		var meny = model.getFullMenu();
 		for (i in meny){

@@ -77,10 +77,10 @@
     color:white;
     }
     #right-column{
-    float: left;
+    float: right;
     color:white;
     width:23%;
-    padding:6.25px;
+    
     }
     #vitruta {
     line-height:30px;
@@ -92,8 +92,6 @@
     padding:15px; 
     height: 5%;   
     }
-
-
     #imagetext{
     float:left;
     width:50%;
@@ -116,7 +114,6 @@
     float:right;
     padding:15px;    
 }
-
     #menuView {
     color: white;
     }
@@ -126,7 +123,7 @@
 <div class="row">
     <div class="col-sm-12 ">
     	<div id="header">
-      	<h1>Homelette</h1><h5>From the best chefs in the world directly in youre kitchen</h5>
+      	<h1>Homelette</h1><h5>From the best chefs in the world directly in your kitchen</h5>
     	</div>
     </div>
 </div>
@@ -150,34 +147,38 @@
 </div>
 
 
-<div class="row">
+
 <div id="myDinnerView">
   <div id="nav">
-    <h1>My Dinner</h1><br>     
-    <div id="left-column"> 
-      <p>People</p>
-      <div id="numberOfGuests"><input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10"></div>
-      <br><br>
-      <p>Dishname<br>
-      <div id="dishname"></p>
+    <div class="row">
+      <h1>My Dinner</h1><br>     
+      <div class="col-sm-8">
+        <p>People</p>
+        <div id="numberOfGuests"><input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10"></div>
+        <br>
       </div>
-      
-      <button id="createDinner" class="btn btn-default" value="Confirm dinner">Confirm Dinner</button>
-	      </div>
+      <div class="col-sm-4 ">
+            <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+            <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+            <br><br>
+      </div>
+    </div>
 
-	      <div id="right-column"> 
-	        <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-	        <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-	        <br><br>
-	        <br>
-	        <p>Cost</br><span id="cost"></span></p>
-	        <br>
-	   </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <p>Dishname</p>
+        <div id="dishname"></p>
+        </div>
+        <button id="createDinner" class="btn btn-default" value="Confirm dinner">Confirm Dinner</button>
+	     </div>
+	      
+  	  <div class="col-sm-4 ">    
+        <p>Cost</p><span id="cost"></span><span id="totalMenuPrice"></span></p>
+        <br>
+	    </div>
     </div>
   </div>
-
-
-
+</div>
   
 	<div id="thirdview">
 	    <div id="vitruta">
@@ -200,27 +201,43 @@
 	        </div>
         </div>
 	     </div>
- 
 	  	<div id="dishesview"></div> 
 	</div>
 
 
 
-  <div id="selecteddish">
-    <div id="imagetext">
-    	<span id="dishImage"></span>
-      <p><span id="dishDescription"></span></p>
-      <button id="backButton" class="btn btn-default" type="button" float:right; >Back to select dish</button>
-    </div>
-    <div id="ingred">
-      <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
-      <p><div id="ingredients" style="display:all;"></div></p>
-  	  	<p>SEK     <span id="totalPrice"></span>  </p>
-  	    </br>
-  	    </br>
-      <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
-    </div>
+
+
+
+
+
+
+
+
+
+<div id="selecteddish">
+  <div id="imagetext">
+  	<span id="dishImage"></span>
+    <p><span id="dishDescription"></span></p>
+    <button id="backButton" class="btn btn-default" type="button" float:right;>Back to select dish</button>
   </div>
+  <div id="ingred">
+    <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
+    <p><div id="ingredients" style="display:all;"></div></p>
+	  	<p>SEK     <span id="totalPrice"></span>  </p>
+	    </br>
+	    </br>
+    <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 
   <div id ="menuOverviewView">
@@ -228,7 +245,7 @@
 	    <h3>
         My dinner 4 people
         <button id="gobackbutton" class="btn btn-default" type="button" style="float: right;" >Go back and edit dinner</button>
-        <button id="finishButton" class="btn btn-default" type="button" style="float: right;" >View Preparation</button>
+        <button id="finishButton" class="btn btn-default" type="button" style="float: right;">View Preparation</button>
       </h3>
 	  	</div>
 	  	<span id="menuView"><span>

@@ -4,7 +4,7 @@ var DishesView = function (container, model) {
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
 	this.coursebutton = container.find("#coursebutton");
-	var buttonArray = this.buttonArray = [];
+	var buttonArray = this.buttonArray = [3];
 	var dishesIDs = this.dishesIDs = [];
 
 	function viewThis(searchstring){
@@ -20,13 +20,13 @@ var DishesView = function (container, model) {
 		$("#dishesview").empty();
 		for(k=0; k<dishes.length; k++){
 			dishesIDs.push(dishes[k].id);
-			var $uniqueButton= $('<button/>').attr({ type:'button', name:'btn' + k, text: dishes[k].name, id: dishes[k].id, class:"btn btn-default", style: "float:left; "});
-			buttonArray.push($uniqueButton);
+			
 			$("#dishesview").append('<div id="rutor" class="col-xs-6 col-md-3">'
 	      		+ '<a href="#" class="thumbnail">' 
 	      		+ '<img src="images/' + dishes[k].image + '"HEIGHT="150px" WIDTH="150px" alt="...">');
-			$("#dishesview").append($uniqueButton);
+		
 			$("#dishesview").append("</div>");
+			
 		}
 	}
 
