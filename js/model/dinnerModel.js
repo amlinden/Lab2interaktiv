@@ -130,6 +130,7 @@ var DinnerModel = function() {
 	  });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  this.notifyObserver();
 	  //this.model.notify(); 	
 =======
@@ -138,6 +139,10 @@ var DinnerModel = function() {
 =======
 	  this.notifyObserver(); 	
 >>>>>>> master
+=======
+	  this.notifyObserver();
+	  //this.model.notify(); 	
+>>>>>>> parent of 3972131... Merge branch 'master' into ny-branch
 	}
 
 	//function that returns a dish of specific ID
@@ -147,7 +152,7 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
-		//this.notifyObserver(); 
+		//this.model.notify(); 
 	}
 
 	function getRecipeJson() {
