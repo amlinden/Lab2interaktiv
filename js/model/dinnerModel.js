@@ -128,8 +128,12 @@ var DinnerModel = function() {
 		}
 	  	return dish.type == type && found;
 	  });
+<<<<<<< HEAD
 	  this.notifyObserver();
 	  //this.model.notify(); 	
+=======
+	  this.notifyObserver(); 	
+>>>>>>> master
 	}
 
 	//function that returns a dish of specific ID
@@ -139,7 +143,7 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
-		//this.model.notify(); 
+		//this.notifyObserver(); 
 	}
 
 	function getRecipeJson() {
