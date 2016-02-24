@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var Dishescontroler = function(view, model){
 	function viewThis(){
 
@@ -12,19 +11,11 @@ var Dishescontroler = function(view, model){
 			view.update(searchstring);
 			viewThis();
 		});
-<<<<<<< Updated upstream
 
 		for(var k = 0; k < $('#list div').length; k++) {
 			var curr = $('#list div')[k];
 			curr.onclick = function() {
 				model.setDishToView(this.id);
-=======
-		console.log(k);
-		view.dishesshow.click(function(){
-			for(k=0; k<dishes.length; k++){
-				console.log(k);
-				model.setDishToView(dishes[k].id);
->>>>>>> Stashed changes
 				$("#dishesview").hide();
 				$("#thirdview").hide();
 				$("#myDinnerView").show();
@@ -33,14 +24,8 @@ var Dishescontroler = function(view, model){
 				$("#preparationView").hide();
 				view.update(searchstring);
 				viewThis();
-<<<<<<< Updated upstream
 			}
 		}
-=======
-				}
-			
-		});
->>>>>>> Stashed changes
 	}
 
 	this.update = function(){
@@ -52,12 +37,3 @@ var Dishescontroler = function(view, model){
 }
 
 //typeselectcoursebutton
-=======
-var Mydishescontroler = function(view, model){
-	
-	view.coursebutton.click(function(){
-		model.getAllDishes(model.getDish());
-
-		});
-}
->>>>>>> master

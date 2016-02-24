@@ -129,8 +129,12 @@ var DinnerModel = function() {
 	  	return dish.type == type && found;
 	  });
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  this.notifyObserver();
 	  //this.model.notify(); 	
+=======
+	  this.notifyObserver(); 	
+>>>>>>> master
 =======
 	  this.notifyObserver(); 	
 >>>>>>> master
