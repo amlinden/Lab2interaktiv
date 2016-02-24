@@ -12,9 +12,9 @@ var Dishescontroler = function(view, model){
 			viewThis();
 		});
 
-		view.dishesshow.click(function(){
-			for(k=0; k<view.buttonArray.length; k++){
-				
+		for(var k = 0; k < $('#list div').length; k++) {
+			var curr = $('#list div')[k];
+			curr.onclick = function() {
 				model.setDishToView(this.id);
 				$("#dishesview").hide();
 				$("#thirdview").hide();
@@ -24,9 +24,8 @@ var Dishescontroler = function(view, model){
 				$("#preparationView").hide();
 				view.update(searchstring);
 				viewThis();
-				
 			}
-		});
+		}
 	}
 
 	this.update = function(){

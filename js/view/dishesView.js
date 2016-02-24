@@ -18,16 +18,14 @@ var DishesView = function (container, model) {
 		}
 	
 		$("#dishesview").empty();
-		for(k=0; k<dishes.length; k++){
-			dishesIDs.push(dishes[k].id);
-			
-			$("#dishesview").append('<div id="rutor" class="col-xs-6 col-md-3">'
-	      		+ '<a href="#" class="thumbnail">' 
-	      		+ '<img src="images/' + dishes[k].image + '"HEIGHT="150px" WIDTH="150px" alt="...">');
-		
-			$("#dishesview").append("</div>");
-			
-		}
+		var sessionlist = "";
+		for (k = 0; k<dishes.length; k++) {
+			sessionlist += '<li id=list style="display:inline-block;width:200px;height:200px;">' + '<div id=' + dishes[k].id + '>' + '<img style="width:150px;height:150px;" src="' + 'images/' + dishes[k].image + '" alt ="' + dishes[k].image +
+ 			'">' + '<br>' + dishes[k].name + '</div>';
+ 		}
+	
+		$("#dishesview").append(sessionlist);
+		var sessionlist = "";
 	}
 
 
